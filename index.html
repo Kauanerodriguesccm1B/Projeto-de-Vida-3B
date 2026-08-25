@@ -3,107 +3,267 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meus Objetivos do Ano</title>
+
+<link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
 
-    <section class="conteudo-principal">
-
-        <h2 class="titulo-principal">
-            Meus Objetivos do ano<span>_</span>
-        </h2>
-
-        <div class="botoes">
-
-            <button class="botao" onclick="mostrarPlanejamento('uem')">
-                Aprovação na UEM
-            </button>
-
-            <button class="botao" onclick="mostrarPlanejamento('financas')">
-                Finanças
-            </button>
-
-            <button class="botao">
-                Criar um portfólio
-            </button>
-
-            <button class="botao">
-                Atualizar meu currículo
-            </button>
-
-        </div>
-
-        <!-- PLANEJAMENTO UEM -->
-        <div id="uem" class="planejamento">
-
-            <h2>🎓 Aprovação na UEM</h2>
-
-            <h3>📚 Rotina</h3>
-
-            <ul>
-                <li>Curso pré-vestibular Alfa, de segunda a sexta, das 19:00 às 22:30;</li>
-                <li>Fazer uma redação por semana;</li>
-                <li>Fazer 2 simulados por mês.</li>
-            </ul>
-
-            <h3>📅 Datas importantes</h3>
-
-            <p><strong>Vestibular:</strong> 12/07/2026</p>
-            <p><strong>Resultado:</strong> 07/08/2026</p>
-
-        </div>
+<div class="decoracao">
+🌿 ✨ 📚 ✨ 🌿
+</div>
 
 
-        <!-- PLANEJAMENTO FINANCEIRO -->
-        <div id="financas" class="planejamento">
+<section class="principal">
 
-            <h2>💰 Finanças</h2>
-
-            <h3>💵 Renda</h3>
-
-            <ul>
-                <li>Salário do trabalho de meio período: <strong>R$ 740,00</strong></li>
-                <li>Atividades de renda extra: <strong>R$ 140,00</strong></li>
-            </ul>
-
-            <h3>📊 Planejamento</h3>
-
-            <ul>
-                <li>Guardar: <strong>R$ 500,00</strong></li>
-                <li>Terapia: <strong>R$ 80,00</strong></li>
-                <li>Corte de cabelo: <strong>R$ 40,00</strong></li>
-                <li>Parcela Shein: <strong>R$ 90,00</strong></li>
-                <li>Sobra do salário: <strong>Gasto livre</strong></li>
-            </ul>
-
-        </div>
-
-    </section>
+<h1>
+🌱 Meus Objetivos do Ano 🌱
+</h1>
 
 
-    <script>
+<p class="subtitulo">
+Organizando meus planos, sonhos e conquistas.
+</p>
 
-        function mostrarPlanejamento(id) {
 
-            const planejamento = document.getElementById(id);
+<div class="objetivos">
 
-            if (planejamento.style.display === "block") {
-                planejamento.style.display = "none";
-            } else {
 
-                document.querySelectorAll(".planejamento").forEach(function(item) {
-                    item.style.display = "none";
-                });
+<!-- UEM -->
 
-                planejamento.style.display = "block";
-            }
-        }
+<details>
 
-    </script>
+<summary>🎓 Aprovação na UEM</summary>
+
+<div class="conteudo">
+
+<h2>📚 Plano de Estudos</h2>
+
+<p>
+Meu objetivo é me preparar para o vestibular da UEM
+e conquistar minha aprovação.
+</p>
+
+
+<h3>📝 Rotina</h3>
+
+<ul>
+
+<li>Curso pré-vestibular Alfa — segunda a sexta;</li>
+
+<li>Horário: das 19:00 às 22:30;</li>
+
+<li>Fazer uma redação por semana;</li>
+
+<li>Fazer 2 simulados por mês.</li>
+
+</ul>
+
+
+<h3>📅 Datas importantes</h3>
+
+<div class="data">
+
+<strong>Vestibular:</strong>
+<br>
+12/07/2026
+
+</div>
+
+
+<div class="data">
+
+<strong>Resultado:</strong>
+<br>
+07/08/2026
+
+</div>
+
+
+<div class="total">
+
+🎯 Meta: conseguir minha aprovação na UEM!
+
+</div>
+
+</div>
+
+</details>
+
+
+
+<!-- FINANÇAS -->
+
+<details>
+
+<summary>💰 Finanças</summary>
+
+<div class="conteudo">
+
+<h2>💵 Meu Planejamento Financeiro</h2>
+
+
+<h3>📥 Renda</h3>
+
+<ul>
+
+<li>
+Salário do trabalho de meio período:
+<strong>R$ 740,00</strong>
+</li>
+
+<li>
+Atividades de renda extra:
+<strong>R$ 140,00</strong>
+</li>
+
+</ul>
+
+
+<h3>📊 Organização do dinheiro</h3>
+
+<ul>
+
+<li>
+Guardar:
+<strong>R$ 500,00</strong>
+</li>
+
+<li>
+Terapia:
+<strong>R$ 80,00</strong>
+</li>
+
+<li>
+Corte de cabelo:
+<strong>R$ 40,00</strong>
+</li>
+
+<li>
+Parcela Shein:
+<strong>R$ 90,00</strong>
+</li>
+
+<li>
+Sobra do salário:
+<strong>Gasto livre</strong>
+</li>
+
+</ul>
+
+
+<div class="total">
+
+💎 Prioridade: guardar dinheiro e cuidar da minha vida financeira.
+
+</div>
+
+</div>
+
+</details>
+
+
+
+<!-- PORTFÓLIO -->
+
+<details>
+
+<summary>🎨 Criar um Portfólio</summary>
+
+<div class="conteudo">
+
+<h2>✨ Meu Portfólio</h2>
+
+<p>
+Criar e organizar um portfólio para apresentar
+meus trabalhos, projetos, habilidades e experiências.
+</p>
+
+
+<h3>📌 Objetivos</h3>
+
+<ul>
+
+<li>Selecionar meus melhores trabalhos;</li>
+
+<li>Organizar meus projetos;</li>
+
+<li>Apresentar minhas habilidades;</li>
+
+<li>Criar uma identidade visual;</li>
+
+<li>Manter o portfólio sempre atualizado.</li>
+
+</ul>
+
+
+<div class="total">
+
+🚀 Meta: construir um portfólio que represente quem eu sou e o que sei fazer.
+
+</div>
+
+</div>
+
+</details>
+
+
+
+<!-- CURRÍCULO -->
+
+<details>
+
+<summary>📄 Atualizar meu Currículo</summary>
+
+<div class="conteudo">
+
+<h2>💼 Meu Currículo</h2>
+
+<p>
+Manter meu currículo atualizado para oportunidades
+de trabalho, estágio, jovem aprendiz e projetos.
+</p>
+
+
+<h3>📋 O que quero atualizar</h3>
+
+<ul>
+
+<li>Informações pessoais;</li>
+
+<li>Formação acadêmica;</li>
+
+<li>Cursos;</li>
+
+<li>Habilidades;</li>
+
+<li>Experiências;</li>
+
+<li>Projetos e atividades.</li>
+
+</ul>
+
+
+<div class="total">
+
+🌟 Meta: ter um currículo organizado e pronto para novas oportunidades.
+
+</div>
+
+</div>
+
+</details>
+
+
+</div>
+
+</section>
 
 </body>
 
