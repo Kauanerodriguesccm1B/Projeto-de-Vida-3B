@@ -1,3 +1,4 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 
 
@@ -18,18 +19,10 @@ body {
 
     padding: 70px 20px;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    overflow-x: hidden;
-
     background:
 
         radial-gradient(
-            circle at 10% 10%,
+            circle at 10% 15%,
             #fff176 0,
             transparent 20%
         ),
@@ -37,7 +30,7 @@ body {
         radial-gradient(
             circle at 90% 20%,
             #81d4fa 0,
-            transparent 22%
+            transparent 20%
         ),
 
         radial-gradient(
@@ -53,11 +46,13 @@ body {
             #42a5f5
         );
 
+    overflow-x: hidden;
+
 }
 
 
 /* =========================
-   POKÉMON DECORATIVOS
+   POKÉMON FLUTUANDO
 ========================= */
 
 .pokemon {
@@ -66,18 +61,20 @@ body {
 
     z-index: 0;
 
-    font-size: 70px;
-
-    filter: drop-shadow(0 7px 0 rgba(0,0,0,.2));
-
-    animation: flutuar 3s ease-in-out infinite;
+    font-size: 65px;
 
     user-select: none;
+
+    filter:
+        drop-shadow(0 7px 0 rgba(0,0,0,.2));
+
+    animation:
+        flutuar 3s ease-in-out infinite;
 
 }
 
 
-.pikachu {
+.pokemon-1 {
 
     top: 25px;
     left: 25px;
@@ -85,17 +82,17 @@ body {
 }
 
 
-.eevee {
+.pokemon-2 {
 
-    top: 100px;
-    right: 30px;
+    top: 80px;
+    right: 35px;
 
     animation-delay: .5s;
 
 }
 
 
-.bulbasaur {
+.pokemon-3 {
 
     bottom: 30px;
     left: 25px;
@@ -105,54 +102,42 @@ body {
 }
 
 
-.charmander {
+.pokemon-4 {
 
-    bottom: 20px;
-    right: 25px;
+    bottom: 25px;
+    right: 30px;
 
     animation-delay: 1.5s;
 
 }
 
 
-.squirtle {
+.pokemon-5 {
 
     top: 45%;
-    left: 10px;
+    left: 12px;
 
-    font-size: 55px;
+    font-size: 50px;
 
     animation-delay: 2s;
 
 }
 
 
-.jigglypuff {
+.pokemon-6 {
 
     top: 45%;
-    right: 10px;
+    right: 12px;
 
-    font-size: 55px;
+    font-size: 50px;
 
     animation-delay: 2.5s;
 
 }
 
 
-.snorlax {
-
-    bottom: 48%;
-    left: 3%;
-
-    font-size: 45px;
-
-    opacity: .8;
-
-}
-
-
 /* =========================
-   POKÉ BALLS
+   POKÉ BALL
 ========================= */
 
 .pokeball {
@@ -164,21 +149,21 @@ body {
 
     border-radius: 50%;
 
-    border: 7px solid #222;
+    border: 6px solid #222;
 
     background:
-
         linear-gradient(
             #ef5350 0 45%,
             #222 45% 55%,
-            #fff 55%
+            white 55%
         );
+
+    opacity: .75;
 
     z-index: 0;
 
-    opacity: .8;
-
-    animation: girar 8s linear infinite;
+    animation:
+        girar 10s linear infinite;
 
 }
 
@@ -189,8 +174,13 @@ body {
 
     position: absolute;
 
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 
     background: white;
 
@@ -198,37 +188,32 @@ body {
 
     border-radius: 50%;
 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
 }
 
 
-.ball1 {
+.ball-1 {
 
-    top: 20%;
     left: 7%;
+    top: 20%;
 
 }
 
 
-.ball2 {
+.ball-2 {
 
-    top: 75%;
     right: 8%;
+    bottom: 15%;
 
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 
 }
 
 
-.ball3 {
+.ball-3 {
 
-    top: 15%;
-    right: 17%;
+    right: 15%;
+    top: 10%;
 
     width: 45px;
     height: 45px;
@@ -237,7 +222,7 @@ body {
 
 
 /* =========================
-   PRINCIPAL
+   CONTAINER
 ========================= */
 
 .principal {
@@ -249,6 +234,8 @@ body {
     width: 800px;
 
     max-width: 100%;
+
+    margin: auto;
 
     padding: 40px;
 
@@ -271,35 +258,49 @@ body {
    CABEÇALHO
 ========================= */
 
-.placa {
+.cabecalho {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    gap: 14px;
+    justify-content: center;
+
+    gap: 15px;
 
     color: #555;
 
     font-size: 13px;
 
-    letter-spacing: 2px;
+    font-weight: bold;
 
-    margin-bottom: 10px;
+    letter-spacing: 2px;
 
 }
 
 
-.placa span {
+.pokeball-mini {
 
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            #ef5350 0 43%,
+            #222 43% 57%,
+            white 57%
+        );
+
+    border: 2px solid #222;
 
 }
 
 
 h1 {
+
+    margin-top: 10px;
 
     text-align: center;
 
@@ -308,10 +309,7 @@ h1 {
     font-size: 43px;
 
     text-shadow:
-
         3px 3px 0 #222;
-
-    margin-bottom: 10px;
 
 }
 
@@ -322,7 +320,7 @@ h1 {
 
     color: #666;
 
-    font-size: 17px;
+    margin-top: 10px;
 
     margin-bottom: 25px;
 
@@ -346,7 +344,7 @@ h1 {
 }
 
 
-.status-item {
+.status-card {
 
     display: flex;
 
@@ -354,7 +352,7 @@ h1 {
 
     gap: 10px;
 
-    padding: 10px 16px;
+    padding: 10px 15px;
 
     background: #fff8d6;
 
@@ -367,7 +365,14 @@ h1 {
 }
 
 
-.status-item > span {
+.status-icon {
+
+    font-size: 25px;
+
+}
+
+
+.status-card div {
 
     display: flex;
 
@@ -376,7 +381,7 @@ h1 {
 }
 
 
-.status-item small {
+.status-card small {
 
     font-size: 9px;
 
@@ -385,7 +390,7 @@ h1 {
 }
 
 
-.status-item strong {
+.status-card strong {
 
     font-size: 15px;
 
@@ -396,7 +401,7 @@ h1 {
    MISSÕES
 ========================= */
 
-.objetivos {
+.missoes {
 
     display: flex;
 
@@ -407,35 +412,36 @@ h1 {
 }
 
 
-details {
-
-    border: 4px solid #222;
-
-    border-radius: 24px;
+.missao {
 
     overflow: hidden;
 
-    box-shadow: 0 6px 0 #222;
+    border: 4px solid #222;
+
+    border-radius: 23px;
 
     background: white;
 
-    transition: .25s;
+    box-shadow: 0 6px 0 #222;
+
+    transition: transform .2s;
 
 }
 
 
-details:hover {
+.missao:hover {
 
     transform: translateY(-3px);
 
 }
 
 
+/* IMPORTANTE:
+   O comportamento de abrir/fechar
+   é totalmente nativo do <details>.
+*/
+
 summary {
-
-    list-style: none;
-
-    cursor: pointer;
 
     display: flex;
 
@@ -443,9 +449,13 @@ summary {
 
     gap: 15px;
 
-    padding: 17px;
+    padding: 16px;
 
     color: white;
+
+    cursor: pointer;
+
+    list-style: none;
 
     user-select: none;
 
@@ -459,56 +469,58 @@ summary::-webkit-details-marker {
 }
 
 
-details:nth-child(1) summary {
+.missao-vermelha summary {
 
     background: #e53935;
 
 }
 
 
-details:nth-child(2) summary {
+.missao-amarela summary {
 
     background: #f9a825;
+
+    color: #222;
 
 }
 
 
-details:nth-child(3) summary {
+.missao-roxa summary {
 
     background: #8e44ad;
 
 }
 
 
-details:nth-child(4) summary {
+.missao-azul summary {
 
     background: #1976d2;
 
 }
 
 
-.icone-missao {
+.icone {
 
     width: 55px;
     height: 55px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    background: rgba(255,255,255,.25);
+    font-size: 30px;
 
-    border: 3px solid white;
+    border: 3px solid currentColor;
 
     border-radius: 15px;
 
-    font-size: 30px;
+    background: rgba(255,255,255,.25);
 
 }
 
 
-.nome-missao {
+.titulo-missao {
 
     flex: 1;
 
@@ -519,34 +531,36 @@ details:nth-child(4) summary {
 }
 
 
-.nome-missao strong {
+.titulo-missao strong {
 
     font-size: 20px;
 
 }
 
 
-.nome-missao small {
-
-    margin-top: 3px;
+.titulo-missao span {
 
     font-size: 11px;
+
+    margin-top: 3px;
 
 }
 
 
 .seta {
 
-    font-size: 20px;
+    font-size: 28px;
 
-    transition: .3s;
+    font-weight: bold;
+
+    transition: transform .2s;
 
 }
 
 
 details[open] .seta {
 
-    transform: rotate(180deg);
+    transform: rotate(45deg);
 
 }
 
@@ -580,9 +594,13 @@ details[open] .seta {
 
     display: inline-block;
 
+    padding: 7px 12px;
+
+    margin-bottom: 15px;
+
     color: white;
 
-    padding: 7px 12px;
+    background: #222;
 
     border-radius: 10px;
 
@@ -590,59 +608,27 @@ details[open] .seta {
 
     font-weight: bold;
 
-    margin-bottom: 15px;
-
-}
-
-
-.vermelho {
-
-    background: #e53935;
-
-}
-
-
-.amarelo {
-
-    background: #f9a825;
-
-    color: #222;
-
-}
-
-
-.roxo {
-
-    background: #8e44ad;
-
-}
-
-
-.azul {
-
-    background: #1976d2;
-
 }
 
 
 .conteudo h2 {
 
+    margin-bottom: 12px;
+
     color: #222;
 
-    font-size: 27px;
-
-    margin-bottom: 12px;
+    font-size: 26px;
 
 }
 
 
 .conteudo h3 {
 
-    color: #1976d2;
-
-    margin-top: 23px;
+    margin-top: 22px;
 
     margin-bottom: 10px;
+
+    color: #1976d2;
 
 }
 
@@ -663,7 +649,7 @@ ul {
 
 li {
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
 }
 
@@ -687,9 +673,9 @@ li::marker {
 
     gap: 15px;
 
-    padding: 14px;
-
     margin-top: 10px;
+
+    padding: 14px;
 
     background: #fff8d6;
 
@@ -700,14 +686,14 @@ li::marker {
 }
 
 
-.item-icon {
+.data > span {
 
     font-size: 30px;
 
 }
 
 
-.data div:last-child {
+.data div {
 
     display: flex;
 
@@ -718,7 +704,7 @@ li::marker {
 
 .data small {
 
-    font-size: 10px;
+    font-size: 9px;
 
     color: #777;
 
@@ -732,9 +718,9 @@ li::marker {
 }
 
 
-.data span {
+.data p {
 
-    font-size: 14px;
+    margin: 0;
 
 }
 
@@ -743,49 +729,48 @@ li::marker {
    RECOMPENSA
 ========================= */
 
-.total {
+.recompensa {
 
-    margin-top: 23px;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 22px;
 
     padding: 18px;
 
     text-align: center;
 
-    border: 4px solid #222;
-
-    border-radius: 18px;
-
     background:
-
         linear-gradient(
             135deg,
             #fff176,
             #ffca28
         );
 
+    border: 4px solid #222;
+
+    border-radius: 18px;
+
     box-shadow: 0 5px 0 #222;
 
-    font-weight: bold;
+    color: #222;
 
 }
 
 
-.total strong {
-
-    display: block;
-
-    margin-top: 5px;
+.recompensa strong {
 
     font-size: 16px;
 
 }
 
 
-.xp {
-
-    display: block;
-
-    margin-top: 8px;
+.recompensa b {
 
     color: #e53935;
 
@@ -802,7 +787,7 @@ li::marker {
 
     padding: 20px;
 
-    background: #f4f8ff;
+    background: #eef7ff;
 
     border: 4px solid #222;
 
@@ -811,69 +796,89 @@ li::marker {
 }
 
 
-.equipe h3 {
+.equipe h2 {
 
     text-align: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+
+    font-size: 21px;
 
 }
 
 
-.pokemon-equipe {
+.equipe-grid {
 
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 
 }
 
 
-.pokemon-equipe div {
+.pokemon-card {
 
     display: flex;
+
+    flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 7px;
+    gap: 3px;
 
-    padding: 10px;
+    padding: 12px;
 
     background: white;
 
     border: 3px solid #222;
 
-    border-radius: 13px;
+    border-radius: 15px;
 
-    box-shadow: 0 3px 0 #222;
+    box-shadow: 0 4px 0 #222;
 
-    font-size: 22px;
+    font-size: 30px;
+
+    transition: .2s;
 
 }
 
 
-.pokemon-equipe span {
+.pokemon-card:hover {
 
-    font-size: 12px;
+    transform: translateY(-5px) rotate(2deg);
 
-    font-weight: bold;
+}
+
+
+.pokemon-card strong {
+
+    font-size: 13px;
+
+}
+
+
+.pokemon-card small {
+
+    color: #777;
+
+    font-size: 10px;
 
 }
 
 
 /* =========================
-   RODAPÉ
+   FOOTER
 ========================= */
 
 footer {
 
-    text-align: center;
-
     margin-top: 28px;
+
+    text-align: center;
 
     color: #333;
 
@@ -886,7 +891,7 @@ footer small {
 
     display: block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
     color: #777;
 
@@ -901,15 +906,20 @@ footer small {
 
 @keyframes flutuar {
 
-    0%, 100% {
+    0%,
+    100% {
 
-        transform: translateY(0) rotate(-3deg);
+        transform:
+            translateY(0)
+            rotate(-3deg);
 
     }
 
     50% {
 
-        transform: translateY(-12px) rotate(3deg);
+        transform:
+            translateY(-12px)
+            rotate(3deg);
 
     }
 
@@ -978,7 +988,7 @@ footer small {
     }
 
 
-    .status-item {
+    .status-card {
 
         padding: 8px 11px;
 
@@ -992,7 +1002,7 @@ footer small {
     }
 
 
-    .icone-missao {
+    .icone {
 
         width: 45px;
         height: 45px;
@@ -1002,14 +1012,14 @@ footer small {
     }
 
 
-    .nome-missao strong {
+    .titulo-missao strong {
 
         font-size: 16px;
 
     }
 
 
-    .nome-missao small {
+    .titulo-missao span {
 
         font-size: 9px;
 
@@ -1023,9 +1033,16 @@ footer small {
     }
 
 
+    .equipe-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
     .pokemon {
 
-        font-size: 45px;
+        font-size: 43px;
 
     }
 
@@ -1036,11 +1053,5 @@ footer small {
 
     }
 
-
-    .pokemon-equipe {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
 }
+```
