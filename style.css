@@ -1,68 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Titan+One&display=swap');
 
 
-/* ==============================
+/* =========================================
    RESET
-============================== */
+========================================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     min-height: 100%;
-
 }
 
-
 body {
-
     min-height: 100vh;
 
-    padding: 45px 20px 70px;
+    padding: 55px 20px 70px;
 
     overflow-x: hidden;
 
     font-family: 'Quicksand', sans-serif;
 
     background:
-
         radial-gradient(
-            circle at 20% 10%,
+            circle at 15% 15%,
             rgba(255,255,255,.25),
-            transparent 15%
+            transparent 18%
         ),
 
         radial-gradient(
-            circle at 85% 25%,
-            rgba(255,255,255,.2),
-            transparent 18%
+            circle at 85% 35%,
+            rgba(255,255,255,.18),
+            transparent 20%
         ),
 
         linear-gradient(
             180deg,
-            #ffcf32 0%,
-            #ff9f1c 28%,
-            #3da9fc 65%,
-            #1667a8 100%
+            #f6c928 0%,
+            #f59d24 25%,
+            #45a9e8 65%,
+            #176aa7 100%
         );
-
 }
 
 
-/* ==============================
+/* =========================================
    DECORAÇÕES
-============================== */
+========================================= */
 
 .pokemon {
-
     position: fixed;
 
     z-index: 0;
@@ -72,109 +61,78 @@ body {
     user-select: none;
 
     filter:
-        drop-shadow(0 5px 4px rgba(0,0,0,.25));
+        drop-shadow(0 5px 5px rgba(0,0,0,.25));
 
-    animation:
-        flutuar 4s ease-in-out infinite;
-
+    animation: flutuar 4s ease-in-out infinite;
 }
 
 
 .pika {
-
     left: 3%;
-
     bottom: 8%;
-
-    font-size: 85px;
-
+    font-size: 80px;
 }
 
 
 .pokebola {
-
-    right: 5%;
-
-    top: 8%;
-
-    font-size: 65px;
+    right: 4%;
+    top: 7%;
+    font-size: 58px;
 
     animation-delay: 1s;
-
 }
 
 
 .pokebola2 {
-
     left: 5%;
-
-    top: 14%;
-
-    font-size: 48px;
+    top: 20%;
+    font-size: 45px;
 
     animation-delay: 2s;
-
 }
 
 
 .estrela {
-
-    right: 20%;
-
-    top: 16%;
-
-    font-size: 45px;
+    right: 18%;
+    top: 18%;
+    font-size: 38px;
 
     animation-delay: .5s;
-
 }
 
 
 .estrela2 {
-
-    left: 22%;
-
-    bottom: 12%;
-
-    font-size: 40px;
+    left: 20%;
+    bottom: 14%;
+    font-size: 35px;
 
     animation-delay: 1.5s;
-
 }
 
 
 .raio {
-
     right: 7%;
-
-    bottom: 12%;
-
-    font-size: 60px;
+    bottom: 10%;
+    font-size: 55px;
 
     animation-delay: 2s;
-
 }
 
 
 .folha {
-
-    left: 8%;
-
-    top: 38%;
-
-    font-size: 45px;
+    left: 7%;
+    top: 40%;
+    font-size: 40px;
 
     animation-delay: 2.5s;
-
 }
 
 
-/* ==============================
-   GAME
-============================== */
+/* =========================================
+   CONSOLE PRINCIPAL
+========================================= */
 
 .game {
-
     position: relative;
 
     z-index: 2;
@@ -188,100 +146,107 @@ body {
     padding: 28px;
 
     background:
-
         linear-gradient(
             145deg,
             #ffffff,
-            #eef8ff
+            #f2f9ff
         );
 
-    border: 7px solid #222;
+    border: 6px solid #202020;
 
-    border-radius: 28px;
+    border-radius: 30px;
 
     box-shadow:
 
-        0 0 0 5px #f5c400,
+        0 0 0 5px #f5c928,
 
-        0 20px 50px rgba(0,0,0,.45);
-
+        0 20px 55px rgba(0,0,0,.4);
 }
 
 
-/* ==============================
-   TOPO
-============================== */
+/* =========================================
+   TOPO — NOVO
+========================================= */
 
 .topo {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
 
-    padding-bottom: 20px;
+    justify-content: space-between;
 
-    border-bottom: 4px solid #222;
+    gap: 20px;
 
+    padding: 10px 5px 20px;
+
+    border-bottom: 3px solid #e1e1e1;
 }
 
 
+/* LOGO */
+
 .logo {
+    display: flex;
 
-    font-family: 'Press Start 2P', monospace;
+    align-items: center;
 
-    font-size: 25px;
+    font-family: 'Titan One', sans-serif;
+
+    font-size: 32px;
+
+    letter-spacing: 1px;
 
     color: #ffcb05;
 
+    -webkit-text-stroke: 2px #2a75bb;
+
     text-shadow:
-
-        3px 3px 0 #2a75bb,
-
-        -2px -2px 0 #2a75bb,
-
-        2px -2px 0 #2a75bb,
-
-        -2px 2px 0 #2a75bb;
-
+        3px 4px 0 #1c4f85;
 }
 
 
 .logo strong {
-
-    color: #f44336;
-
+    color: #ef3d35;
 }
 
 
-.status {
+/* STATUS */
 
+.status {
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    align-items: flex-end;
-
-    gap: 5px;
+    gap: 12px;
 
     font-size: 11px;
 
-    font-weight: bold;
+    font-weight: 700;
 
+    color: #555;
+}
+
+
+.status span:first-child {
+    padding: 8px 12px;
+
+    background: #edf5fb;
+
+    border: 2px solid #c8dce9;
+
+    border-radius: 10px;
 }
 
 
 .online {
-
-    color: #21a453;
-
+    color: #179c4c;
 }
 
 
-/* ==============================
-   PERFIL
-============================== */
+/* =========================================
+   PERFIL DA KAUANE
+========================================= */
 
 .perfil {
 
@@ -295,98 +260,108 @@ body {
 
     padding: 20px;
 
-    background: #e9f6ff;
+    background:
 
-    border: 3px solid #2a75bb;
+        linear-gradient(
+            135deg,
+            #fff4b7,
+            #fffdf0
+        );
 
-    border-radius: 20px;
+    border: 3px solid #f0bd21;
 
+    border-radius: 22px;
+
+    box-shadow:
+        0 5px 0 #dcae19;
 }
 
 
 .avatar {
 
-    width: 75px;
-
-    height: 75px;
+    width: 78px;
+    height: 78px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     flex-shrink: 0;
 
-    background: #ffcb05;
+    background: #ffcc28;
 
-    border: 5px solid #222;
+    border: 5px solid #252525;
 
     border-radius: 50%;
 
     font-size: 40px;
 
+    box-shadow:
+        0 4px 0 #b98200;
 }
 
 
 .perfil-texto {
-
     flex: 1;
-
 }
 
 
 .label {
 
-    font-family: 'Press Start 2P', monospace;
+    display: inline-block;
 
-    font-size: 9px;
+    margin-bottom: 5px;
 
-    color: #2a75bb;
+    color: #2777b5;
 
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
 }
 
 
 h1 {
 
-    margin-top: 8px;
+    margin: 0;
 
-    color: #222;
+    color: #242424;
 
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Titan One', sans-serif;
 
-    font-size: 25px;
+    font-size: 29px;
 
-    line-height: 1.5;
-
+    line-height: 1.25;
 }
 
 
 .perfil p {
 
-    margin-top: 6px;
+    margin-top: 7px;
 
-    color: #667;
+    color: #687887;
 
+    font-size: 14px;
 }
 
 
-/* ==============================
+/* =========================================
    XP
-============================== */
+========================================= */
 
 .xp-box {
 
     margin-top: 18px;
 
-    padding: 15px;
+    padding: 15px 17px;
 
-    background: #222;
+    background: #242424;
 
     color: white;
 
     border-radius: 14px;
-
 }
 
 
@@ -396,10 +371,11 @@ h1 {
 
     justify-content: space-between;
 
-    font-size: 12px;
-
     margin-bottom: 8px;
 
+    font-size: 11px;
+
+    font-weight: 700;
 }
 
 
@@ -414,7 +390,6 @@ h1 {
     border: 2px solid white;
 
     border-radius: 20px;
-
 }
 
 
@@ -424,8 +399,12 @@ h1 {
 
     height: 100%;
 
-    background: #53d769;
-
+    background:
+        linear-gradient(
+            90deg,
+            #46d56b,
+            #8bea68
+        );
 }
 
 
@@ -435,21 +414,18 @@ h1 {
 
     margin-top: 7px;
 
-    color: #ddd;
+    color: #d9d9d9;
 
     font-size: 10px;
-
 }
 
 
-/* ==============================
+/* =========================================
    MISSÕES
-============================== */
+========================================= */
 
 .missoes {
-
-    margin-top: 25px;
-
+    margin-top: 27px;
 }
 
 
@@ -462,14 +438,11 @@ h1 {
     gap: 12px;
 
     margin-bottom: 15px;
-
 }
 
 
 .titulo-secao > span {
-
-    font-size: 30px;
-
+    font-size: 29px;
 }
 
 
@@ -477,47 +450,47 @@ h1 {
 
     display: block;
 
-    font-family: 'Press Start 2P', monospace;
+    color: #242424;
 
-    font-size: 14px;
+    font-family: 'Titan One', sans-serif;
 
+    font-size: 20px;
 }
 
 
 .titulo-secao small {
 
-    color: #777;
+    color: #7a8790;
 
+    font-size: 12px;
 }
 
 
-/* ==============================
-   CARDS
-============================== */
+/* =========================================
+   MISSÕES
+========================================= */
 
 .missao {
 
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     overflow: hidden;
 
     background: white;
 
-    border: 4px solid #222;
+    border: 4px solid #242424;
 
     border-radius: 18px;
 
-    box-shadow: 5px 5px 0 rgba(0,0,0,.18);
+    box-shadow:
+        5px 5px 0 rgba(0,0,0,.16);
 
     transition: .2s;
-
 }
 
 
 .missao:hover {
-
     transform: translateY(-3px);
-
 }
 
 
@@ -537,73 +510,81 @@ summary {
 
     color: white;
 
+    user-select: none;
 }
 
 
 summary::-webkit-details-marker {
-
     display: none;
-
 }
 
 
+/* CORES */
+
 .estudos summary {
-
-    background: #2a75bb;
-
+    background:
+        linear-gradient(
+            135deg,
+            #2477b9,
+            #42a9e8
+        );
 }
 
 
 .dinheiro summary {
-
-    background: #21a453;
-
+    background:
+        linear-gradient(
+            135deg,
+            #178d48,
+            #45c86d
+        );
 }
 
 
 .portfolio summary {
-
-    background: #9b59b6;
-
+    background:
+        linear-gradient(
+            135deg,
+            #8847a6,
+            #b978d1
+        );
 }
 
 
 .curriculo-missao summary {
-
-    background: #e67e22;
-
+    background:
+        linear-gradient(
+            135deg,
+            #d86d1e,
+            #f19a43
+        );
 }
 
 
 .icone-missao {
 
-    width: 50px;
-
-    height: 50px;
+    width: 52px;
+    height: 52px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     flex-shrink: 0;
 
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.18);
 
-    border: 3px solid white;
+    border: 3px solid rgba(255,255,255,.9);
 
-    border-radius: 12px;
+    border-radius: 13px;
 
     font-size: 27px;
-
 }
 
 
 .missao-nome {
-
     flex: 1;
-
 }
 
 
@@ -611,65 +592,62 @@ summary::-webkit-details-marker {
 
     display: block;
 
-    font-size: 19px;
-
+    font-size: 18px;
 }
 
 
 .missao-nome small {
 
-    font-size: 11px;
+    display: block;
 
+    margin-top: 3px;
+
+    font-size: 11px;
 }
 
 
 .badge {
 
-    padding: 6px 8px;
+    padding: 6px 9px;
 
-    background: rgba(0,0,0,.25);
+    background: rgba(0,0,0,.22);
 
-    border: 2px solid rgba(255,255,255,.7);
+    border: 2px solid rgba(255,255,255,.65);
 
-    border-radius: 7px;
+    border-radius: 8px;
 
-    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
 
-    font-size: 7px;
-
+    font-weight: 700;
 }
 
 
 .seta {
 
-    font-size: 16px;
+    font-size: 15px;
 
     transition: .2s;
-
 }
 
 
 details[open] .seta {
-
     transform: rotate(180deg);
-
 }
 
 
-/* ==============================
+/* =========================================
    CONTEÚDO
-============================== */
+========================================= */
 
 .conteudo {
 
-    padding: 24px;
+    padding: 25px;
 
-    background: #f8fcff;
+    background: #f9fcff;
 
-    color: #445;
+    color: #4e5e6a;
 
     line-height: 1.7;
-
 }
 
 
@@ -679,18 +657,17 @@ details[open] .seta {
 
     margin-bottom: 15px;
 
-    padding: 7px 10px;
+    padding: 7px 11px;
 
-    color: white;
+    background: #252525;
 
-    background: #222;
+    color: #fff;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
-    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
 
-    font-size: 7px;
-
+    font-weight: 700;
 }
 
 
@@ -698,14 +675,11 @@ details[open] .seta {
 
     margin-bottom: 12px;
 
-    color: #222;
+    color: #252525;
 
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Titan One', sans-serif;
 
-    font-size: 19px;
-
-    line-height: 1.5;
-
+    font-size: 21px;
 }
 
 
@@ -715,41 +689,38 @@ details[open] .seta {
 
     margin-bottom: 8px;
 
-    color: #2a75bb;
+    color: #2678b6;
 
-    font-family: 'Press Start 2P', monospace;
+    font-size: 13px;
 
-    font-size: 11px;
+    font-weight: 700;
+}
 
+
+.conteudo p {
+    margin-bottom: 12px;
 }
 
 
 ul {
-
     padding-left: 22px;
-
 }
 
 
 li {
-
     margin-bottom: 8px;
-
 }
 
 
 li::marker {
-
     content: "▶ ";
-
-    color: #f5b900;
-
+    color: #f2bb13;
 }
 
 
-/* ==============================
-   INFORMAÇÕES
-============================== */
+/* =========================================
+   DATAS
+========================================= */
 
 .info {
 
@@ -757,35 +728,36 @@ li::marker {
 
     justify-content: space-between;
 
+    align-items: center;
+
     margin-top: 8px;
 
-    padding: 12px;
+    padding: 12px 14px;
 
     background: white;
 
-    border: 2px solid #b9d7ea;
+    border: 2px solid #c9ddea;
 
     border-radius: 10px;
-
 }
 
 
 .info strong {
-
-    color: #2a75bb;
-
+    color: #2678b6;
 }
 
 
-/* ==============================
+/* =========================================
    RECOMPENSA
-============================== */
+========================================= */
 
 .recompensa {
 
     display: flex;
 
     flex-direction: column;
+
+    align-items: center;
 
     gap: 6px;
 
@@ -795,65 +767,64 @@ li::marker {
 
     text-align: center;
 
-    background: #fff3a6;
+    background: #fff1a3;
 
-    border: 4px solid #222;
+    border: 3px solid #242424;
 
     border-radius: 14px;
 
-    box-shadow: 4px 4px 0 #f5c400;
-
+    box-shadow:
+        4px 4px 0 #e5b916;
 }
 
 
 .recompensa span {
 
-    font-family: 'Press Start 2P', monospace;
+    color: #806100;
 
-    font-size: 9px;
+    font-size: 10px;
 
-    color: #805c00;
+    font-weight: 700;
 
+    letter-spacing: 1px;
 }
 
 
 .recompensa strong {
-
-    color: #333;
-
+    color: #303030;
 }
 
 
 .verde {
 
-    background: #c9f7d5;
+    background: #cff6d8;
 
-    box-shadow: 4px 4px 0 #21a453;
-
+    box-shadow:
+        4px 4px 0 #20a653;
 }
 
 
 .azul {
 
-    background: #d5edff;
+    background: #d9efff;
 
-    box-shadow: 4px 4px 0 #2a75bb;
-
+    box-shadow:
+        4px 4px 0 #2879b8;
 }
 
 
 .roxo {
 
-    background: #ecd9ff;
+    background: #ead9f4;
 
-    box-shadow: 4px 4px 0 #9b59b6;
-
+    box-shadow:
+        4px 4px 0 #9653af;
 }
 
 
-/* ==============================
+/* =========================================
    RODAPÉ
-============================== */
+========================================= */
 
 footer {
 
@@ -863,17 +834,15 @@ footer {
 
     text-align: center;
 
-    border-top: 3px dashed #aaa;
-
+    border-top: 3px dashed #c7c7c7;
 }
 
 
 .pokebola-footer {
 
-    font-size: 30px;
-
     margin-bottom: 8px;
 
+    font-size: 30px;
 }
 
 
@@ -881,12 +850,9 @@ footer strong {
 
     display: block;
 
-    font-family: 'Press Start 2P', monospace;
+    color: #333;
 
-    font-size: 10px;
-
-    line-height: 1.7;
-
+    font-size: 12px;
 }
 
 
@@ -894,16 +860,17 @@ footer small {
 
     display: block;
 
-    margin-top: 8px;
+    margin-top: 7px;
 
-    color: #777;
+    color: #7b858b;
 
+    font-size: 11px;
 }
 
 
-/* ==============================
+/* =========================================
    ANIMAÇÕES
-============================== */
+========================================= */
 
 @keyframes flutuar {
 
@@ -912,63 +879,55 @@ footer small {
 
         transform:
             translateY(0)
-            rotate(-4deg);
+            rotate(-3deg);
 
     }
 
     50% {
 
         transform:
-            translateY(-12px)
-            rotate(4deg);
+            translateY(-10px)
+            rotate(3deg);
 
     }
 
 }
 
 
-/* ==============================
+/* =========================================
    CELULAR
-============================== */
+========================================= */
 
 @media (max-width: 650px) {
 
     body {
-
         padding: 25px 10px 50px;
-
     }
 
 
     .game {
-
         padding: 18px;
 
         border-width: 5px;
-
     }
 
 
     .topo {
-
         flex-direction: column;
 
-        gap: 12px;
+        align-items: center;
 
+        gap: 12px;
     }
 
 
     .status {
-
-        align-items: center;
-
+        justify-content: center;
     }
 
 
     .logo {
-
-        font-size: 20px;
-
+        font-size: 26px;
     }
 
 
@@ -977,76 +936,54 @@ footer small {
         flex-direction: column;
 
         text-align: center;
-
     }
 
 
     h1 {
-
-        font-size: 18px;
-
+        font-size: 23px;
     }
 
 
     .pokemon {
-
-        transform: scale(.65);
-
+        transform: scale(.6);
     }
 
 
     .pika {
-
-        left: -12px;
-
-        bottom: 3%;
-
+        left: -15px;
+        bottom: 2%;
     }
 
 
     .raio {
-
-        right: -10px;
-
-        bottom: 4%;
-
+        right: -12px;
+        bottom: 3%;
     }
 
 
     .pokebola {
-
         right: -5px;
-
-        top: 3%;
-
-    }
-
-
-    .missao-nome strong {
-
-        font-size: 15px;
-
+        top: 2%;
     }
 
 
     .badge {
-
         display: none;
+    }
 
+
+    .missao-nome strong {
+        font-size: 15px;
     }
 
 
     .conteudo {
-
         padding: 18px;
-
     }
 
 
     .conteudo h2 {
-
-        font-size: 15px;
-
+        font-size: 18px;
     }
 
 }
