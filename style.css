@@ -1,1057 +1,292 @@
-```css
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+/* =====================================
+   TREINAMENTO POKÉMON
+===================================== */
 
+.treinamento {
 
-* {
+    border: 3px solid #f3c331;
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: 'Fredoka', sans-serif;
-
-}
-
-
-body {
-
-    min-height: 100vh;
-
-    padding: 70px 20px;
-
-    background:
-
-        radial-gradient(
-            circle at 10% 15%,
-            #fff176 0,
-            transparent 20%
-        ),
-
-        radial-gradient(
-            circle at 90% 20%,
-            #81d4fa 0,
-            transparent 20%
-        ),
-
-        radial-gradient(
-            circle at 50% 100%,
-            #a5d6a7 0,
-            transparent 25%
-        ),
-
-        linear-gradient(
-            135deg,
-            #ef5350,
-            #ffca28 45%,
-            #42a5f5
-        );
-
-    overflow-x: hidden;
-
-}
-
-
-/* =========================
-   POKÉMON FLUTUANDO
-========================= */
-
-.pokemon {
-
-    position: fixed;
-
-    z-index: 0;
-
-    font-size: 65px;
-
-    user-select: none;
-
-    filter:
-        drop-shadow(0 7px 0 rgba(0,0,0,.2));
-
-    animation:
-        flutuar 3s ease-in-out infinite;
-
-}
-
-
-.pokemon-1 {
-
-    top: 25px;
-    left: 25px;
-
-}
-
-
-.pokemon-2 {
-
-    top: 80px;
-    right: 35px;
-
-    animation-delay: .5s;
-
-}
-
-
-.pokemon-3 {
-
-    bottom: 30px;
-    left: 25px;
-
-    animation-delay: 1s;
-
-}
-
-
-.pokemon-4 {
-
-    bottom: 25px;
-    right: 30px;
-
-    animation-delay: 1.5s;
-
-}
-
-
-.pokemon-5 {
-
-    top: 45%;
-    left: 12px;
-
-    font-size: 50px;
-
-    animation-delay: 2s;
-
-}
-
-
-.pokemon-6 {
-
-    top: 45%;
-    right: 12px;
-
-    font-size: 50px;
-
-    animation-delay: 2.5s;
-
-}
-
-
-/* =========================
-   POKÉ BALL
-========================= */
-
-.pokeball {
-
-    position: fixed;
-
-    width: 90px;
-    height: 90px;
-
-    border-radius: 50%;
-
-    border: 6px solid #222;
-
-    background:
-        linear-gradient(
-            #ef5350 0 45%,
-            #222 45% 55%,
-            white 55%
-        );
-
-    opacity: .75;
-
-    z-index: 0;
-
-    animation:
-        girar 10s linear infinite;
-
-}
-
-
-.pokeball::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 27px;
-    height: 27px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    background: white;
-
-    border: 5px solid #222;
-
-    border-radius: 50%;
-
-}
-
-
-.ball-1 {
-
-    left: 7%;
-    top: 20%;
-
-}
-
-
-.ball-2 {
-
-    right: 8%;
-    bottom: 15%;
-
-    width: 65px;
-    height: 65px;
-
-}
-
-
-.ball-3 {
-
-    right: 15%;
-    top: 10%;
-
-    width: 45px;
-    height: 45px;
-
-}
-
-
-/* =========================
-   CONTAINER
-========================= */
-
-.principal {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: 800px;
-
-    max-width: 100%;
-
-    margin: auto;
-
-    padding: 40px;
-
-    background: white;
-
-    border: 7px solid #222;
-
-    border-radius: 38px;
+    background: #fffdf2;
 
     box-shadow:
-
-        0 12px 0 #222,
-
-        0 25px 50px rgba(0,0,0,.3);
+        0 7px 18px rgba(220,170,30,.20);
 
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+.treinamento:hover {
 
-.cabecalho {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    color: #555;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
+    border-color: #e6ad16;
 
 }
 
 
-.pokeball-mini {
+/* BOTÃO */
 
-    width: 20px;
-    height: 20px;
-
-    border-radius: 50%;
+.treinamento summary {
 
     background:
         linear-gradient(
-            #ef5350 0 43%,
-            #222 43% 57%,
-            white 57%
+            135deg,
+            #f4c430,
+            #ffd95c
         );
 
-    border: 2px solid #222;
+}
+
+
+.treinamento summary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8b51e,
+            #ffd052
+        );
 
 }
 
 
-h1 {
+.treinamento[open] summary {
 
-    margin-top: 10px;
-
-    text-align: center;
-
-    color: #e53935;
-
-    font-size: 43px;
-
-    text-shadow:
-        3px 3px 0 #222;
+    background:
+        linear-gradient(
+            135deg,
+            #dca817,
+            #f4c430
+        );
 
 }
 
 
-.subtitulo {
+/* CONTEÚDO */
 
-    text-align: center;
-
-    color: #666;
-
-    margin-top: 10px;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* =========================
-   STATUS
-========================= */
-
-.status {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-bottom: 30px;
-
-}
-
-
-.status-card {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 10px 15px;
-
-    background: #fff8d6;
-
-    border: 3px solid #222;
-
-    border-radius: 16px;
-
-    box-shadow: 0 4px 0 #222;
-
-}
-
-
-.status-icon {
-
-    font-size: 25px;
-
-}
-
-
-.status-card div {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-
-.status-card small {
-
-    font-size: 9px;
-
-    color: #777;
-
-}
-
-
-.status-card strong {
-
-    font-size: 15px;
-
-}
-
-
-/* =========================
-   MISSÕES
-========================= */
-
-.missoes {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-
-}
-
-
-.missao {
-
-    overflow: hidden;
-
-    border: 4px solid #222;
-
-    border-radius: 23px;
-
-    background: white;
-
-    box-shadow: 0 6px 0 #222;
-
-    transition: transform .2s;
-
-}
-
-
-.missao:hover {
-
-    transform: translateY(-3px);
-
-}
-
-
-/* IMPORTANTE:
-   O comportamento de abrir/fechar
-   é totalmente nativo do <details>.
-*/
-
-summary {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 16px;
-
-    color: white;
-
-    cursor: pointer;
-
-    list-style: none;
-
-    user-select: none;
-
-}
-
-
-summary::-webkit-details-marker {
-
-    display: none;
-
-}
-
-
-.missao-vermelha summary {
-
-    background: #e53935;
-
-}
-
-
-.missao-amarela summary {
-
-    background: #f9a825;
-
-    color: #222;
-
-}
-
-
-.missao-roxa summary {
-
-    background: #8e44ad;
-
-}
-
-
-.missao-azul summary {
-
-    background: #1976d2;
-
-}
-
-
-.icone {
-
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    font-size: 30px;
-
-    border: 3px solid currentColor;
-
-    border-radius: 15px;
-
-    background: rgba(255,255,255,.25);
-
-}
-
-
-.titulo-missao {
-
-    flex: 1;
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-
-.titulo-missao strong {
-
-    font-size: 20px;
-
-}
-
-
-.titulo-missao span {
-
-    font-size: 11px;
-
-    margin-top: 3px;
-
-}
-
-
-.seta {
-
-    font-size: 28px;
-
-    font-weight: bold;
-
-    transition: transform .2s;
-
-}
-
-
-details[open] .seta {
-
-    transform: rotate(45deg);
-
-}
-
-
-/* =========================
-   CONTEÚDO
-========================= */
-
-.conteudo {
-
-    padding: 28px;
-
-    color: #444;
-
-    line-height: 1.7;
+.treinamento .conteudo {
 
     background:
 
         radial-gradient(
             circle at 100% 0,
-            #fff9c4,
-            transparent 25%
+            rgba(255,220,70,.25),
+            transparent 30%
         ),
 
-        white;
+        #fffef5;
 
 }
 
 
-.tag {
+/* ETIQUETA */
 
-    display: inline-block;
+.treinamento .etiqueta {
 
-    padding: 7px 12px;
+    color: #9b7510;
 
-    margin-bottom: 15px;
+    background: #fff4b8;
 
-    color: white;
-
-    background: #222;
-
-    border-radius: 10px;
-
-    font-size: 11px;
-
-    font-weight: bold;
+    border-color: #f1cf52;
 
 }
 
 
-.conteudo h2 {
+/* TÍTULOS */
 
-    margin-bottom: 12px;
+.treinamento .conteudo h2 {
 
-    color: #222;
-
-    font-size: 26px;
+    color: #c08b00;
 
 }
 
 
-.conteudo h3 {
+.treinamento .conteudo h3 {
 
-    margin-top: 22px;
-
-    margin-bottom: 10px;
-
-    color: #1976d2;
+    color: #d29b00;
 
 }
 
 
-.conteudo p {
+/* LISTA */
 
-    margin-bottom: 15px;
+.treinamento li::marker {
 
-}
+    content: "⚡ ";
 
-
-ul {
-
-    padding-left: 25px;
+    color: #e5ad13;
 
 }
 
 
-li {
+/* =====================================
+   BARRA DE XP
+===================================== */
 
-    margin-bottom: 9px;
-
-}
-
-
-li::marker {
-
-    content: "⭐ ";
-
-}
-
-
-/* =========================
-   DATAS
-========================= */
-
-.data {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-top: 10px;
-
-    padding: 14px;
-
-    background: #fff8d6;
-
-    border: 3px solid #222;
-
-    border-radius: 16px;
-
-}
-
-
-.data > span {
-
-    font-size: 30px;
-
-}
-
-
-.data div {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-
-.data small {
-
-    font-size: 9px;
-
-    color: #777;
-
-}
-
-
-.data strong {
-
-    color: #e53935;
-
-}
-
-
-.data p {
-
-    margin: 0;
-
-}
-
-
-/* =========================
-   RECOMPENSA
-========================= */
-
-.recompensa {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 4px;
+.pokemon-xp {
 
     margin-top: 22px;
 
     padding: 18px;
 
+    border-radius: 20px;
+
+    background: #fff8d8;
+
+    border: 2px solid #f1cf52;
+
     text-align: center;
+
+}
+
+
+.pokemon-xp span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #9a7410;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.barra-xp {
+
+    width: 100%;
+
+    height: 16px;
+
+    padding: 3px;
+
+    background: #ddd7bd;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.xp-progresso {
+
+    width: 72%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f2b900,
+            #ffe45c
+        );
+
+    animation:
+        xp 2s ease-in-out infinite alternate;
+
+}
+
+
+.pokemon-xp small {
+
+    display: block;
+
+    margin-top: 9px;
+
+    color: #a18a4c;
+
+}
+
+
+/* =====================================
+   RECOMPENSA
+===================================== */
+
+.treinamento .recompensa {
+
+    border-color: #e6bd35;
 
     background:
         linear-gradient(
             135deg,
-            #fff176,
-            #ffca28
+            #fffde9,
+            #fff3b8
         );
 
-    border: 4px solid #222;
+}
 
-    border-radius: 18px;
 
-    box-shadow: 0 5px 0 #222;
+.treinamento .recompensa span {
 
-    color: #222;
+    color: #a17b12;
 
 }
 
 
-.recompensa strong {
+.treinamento .recompensa strong {
 
-    font-size: 16px;
-
-}
-
-
-.recompensa b {
-
-    color: #e53935;
+    color: #806314;
 
 }
 
 
-/* =========================
-   EQUIPE
-========================= */
+/* =====================================
+   POKÉBOLA FINAL
+===================================== */
 
-.equipe {
-
-    margin-top: 30px;
-
-    padding: 20px;
-
-    background: #eef7ff;
-
-    border: 4px solid #222;
-
-    border-radius: 22px;
-
-}
-
-
-.equipe h2 {
-
-    text-align: center;
-
-    margin-bottom: 18px;
-
-    font-size: 21px;
-
-}
-
-
-.equipe-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 12px;
-
-}
-
-
-.pokemon-card {
+.pokebola-final {
 
     display: flex;
-
-    flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 3px;
+    gap: 10px;
 
-    padding: 12px;
+    margin-top: 20px;
 
-    background: white;
+    padding: 15px;
 
-    border: 3px solid #222;
+    border-radius: 18px;
 
-    border-radius: 15px;
+    background: #fff;
 
-    box-shadow: 0 4px 0 #222;
+    border: 2px dashed #e4b72c;
 
-    font-size: 30px;
-
-    transition: .2s;
-
-}
-
-
-.pokemon-card:hover {
-
-    transform: translateY(-5px) rotate(2deg);
-
-}
-
-
-.pokemon-card strong {
-
-    font-size: 13px;
-
-}
-
-
-.pokemon-card small {
-
-    color: #777;
-
-    font-size: 10px;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    margin-top: 28px;
+    color: #bd8a00;
 
     text-align: center;
 
-    color: #333;
+}
 
-    font-weight: bold;
+
+.pokebola-final strong {
+
+    font-size: 14px;
 
 }
 
 
-footer small {
+/* ANIMAÇÃO DA XP */
 
-    display: block;
-
-    margin-top: 6px;
-
-    color: #777;
-
-    font-weight: normal;
-
-}
-
-
-/* =========================
-   ANIMAÇÕES
-========================= */
-
-@keyframes flutuar {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(-3deg);
-
-    }
-
-    50% {
-
-        transform:
-            translateY(-12px)
-            rotate(3deg);
-
-    }
-
-}
-
-
-@keyframes girar {
+@keyframes xp {
 
     from {
 
-        transform: rotate(0deg);
+        width: 65%;
 
     }
 
     to {
 
-        transform: rotate(360deg);
+        width: 75%;
 
     }
 
 }
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 650px) {
-
-    body {
-
-        padding: 40px 10px;
-
-    }
-
-
-    .principal {
-
-        padding: 22px 15px;
-
-        border-width: 5px;
-
-        border-radius: 27px;
-
-    }
-
-
-    h1 {
-
-        font-size: 29px;
-
-    }
-
-
-    .subtitulo {
-
-        font-size: 14px;
-
-    }
-
-
-    .status {
-
-        flex-wrap: wrap;
-
-    }
-
-
-    .status-card {
-
-        padding: 8px 11px;
-
-    }
-
-
-    summary {
-
-        padding: 13px;
-
-    }
-
-
-    .icone {
-
-        width: 45px;
-        height: 45px;
-
-        font-size: 24px;
-
-    }
-
-
-    .titulo-missao strong {
-
-        font-size: 16px;
-
-    }
-
-
-    .titulo-missao span {
-
-        font-size: 9px;
-
-    }
-
-
-    .conteudo {
-
-        padding: 20px 16px;
-
-    }
-
-
-    .equipe-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-
-    .pokemon {
-
-        font-size: 43px;
-
-    }
-
-
-    .pokeball {
-
-        display: none;
-
-    }
-
-}
-```
