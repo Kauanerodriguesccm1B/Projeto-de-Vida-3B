@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,15 +10,102 @@
 </head>
 
 <body>
+
     <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+
+        <h2 class="titulo-principal">
+            Meus Objetivos do ano<span>_</span>
+        </h2>
+
         <div class="botoes">
-            <button class="botao">Passar na UEM</button>
-            <button class="botao"></button>
-            <button class="botao">Criar um portfolio</button>
-            <button class="botao">Atualizar meu currículo</button>
+
+            <button class="botao" onclick="mostrarPlanejamento('uem')">
+                Aprovação na UEM
+            </button>
+
+            <button class="botao" onclick="mostrarPlanejamento('financas')">
+                Finanças
+            </button>
+
+            <button class="botao">
+                Criar um portfólio
+            </button>
+
+            <button class="botao">
+                Atualizar meu currículo
+            </button>
+
         </div>
+
+        <!-- PLANEJAMENTO UEM -->
+        <div id="uem" class="planejamento">
+
+            <h2>🎓 Aprovação na UEM</h2>
+
+            <h3>📚 Rotina</h3>
+
+            <ul>
+                <li>Curso pré-vestibular Alfa, de segunda a sexta, das 19:00 às 22:30;</li>
+                <li>Fazer uma redação por semana;</li>
+                <li>Fazer 2 simulados por mês.</li>
+            </ul>
+
+            <h3>📅 Datas importantes</h3>
+
+            <p><strong>Vestibular:</strong> 12/07/2026</p>
+            <p><strong>Resultado:</strong> 07/08/2026</p>
+
+        </div>
+
+
+        <!-- PLANEJAMENTO FINANCEIRO -->
+        <div id="financas" class="planejamento">
+
+            <h2>💰 Finanças</h2>
+
+            <h3>💵 Renda</h3>
+
+            <ul>
+                <li>Salário do trabalho de meio período: <strong>R$ 740,00</strong></li>
+                <li>Atividades de renda extra: <strong>R$ 140,00</strong></li>
+            </ul>
+
+            <h3>📊 Planejamento</h3>
+
+            <ul>
+                <li>Guardar: <strong>R$ 500,00</strong></li>
+                <li>Terapia: <strong>R$ 80,00</strong></li>
+                <li>Corte de cabelo: <strong>R$ 40,00</strong></li>
+                <li>Parcela Shein: <strong>R$ 90,00</strong></li>
+                <li>Sobra do salário: <strong>Gasto livre</strong></li>
+            </ul>
+
+        </div>
+
     </section>
+
+
+    <script>
+
+        function mostrarPlanejamento(id) {
+
+            const planejamento = document.getElementById(id);
+
+            if (planejamento.style.display === "block") {
+                planejamento.style.display = "none";
+            } else {
+
+                document.querySelectorAll(".planejamento").forEach(function(item) {
+                    item.style.display = "none";
+                });
+
+                planejamento.style.display = "block";
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>
+```
