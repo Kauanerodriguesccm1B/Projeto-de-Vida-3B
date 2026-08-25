@@ -1,3 +1,4 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
@@ -14,7 +15,6 @@ body {
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
 }
-
 
 .conteudo-principal {
     display: flex;
@@ -50,6 +50,11 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: var(--botao-ativo);
 }
 
 .botao:first-child {
@@ -58,4 +63,43 @@ body {
 
 .botoes {
     display: block;
+    width: 100%;
 }
+
+/* PLANEJAMENTOS */
+
+.planejamento {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--texto-fundo);
+    border: 2px solid var(--botao-ativo);
+    border-radius: 20px;
+    line-height: 1.7;
+}
+
+.planejamento h2 {
+    color: var(--verde);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.planejamento h3 {
+    color: var(--verde);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.planejamento ul {
+    padding-left: 25px;
+}
+
+.planejamento li {
+    margin-bottom: 10px;
+}
+
+.planejamento p {
+    margin: 8px 0;
+}
+```
