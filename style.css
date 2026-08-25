@@ -1,14 +1,15 @@
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 
 
 * {
 
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Fredoka', sans-serif;
 
 }
 
@@ -17,68 +18,207 @@ body {
 
     min-height: 100vh;
 
-    background:
-        linear-gradient(
-            180deg,
-            #e8f5e9,
-            #c8e6c9
-        );
-
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    padding: 40px 20px;
+    padding: 50px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #fff176 0,
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #90caf9 0,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ef5350,
+            #ffca28 45%,
+            #42a5f5
+        );
+
+    position: relative;
+
+    overflow-x: hidden;
 
 }
 
+
+/* =========================
+   DECORAÇÃO
+========================= */
 
 .decoracao {
 
     position: fixed;
 
-    top: 20px;
+    top: 15px;
 
-    font-size: 40px;
+    width: 100%;
 
-    letter-spacing: 10px;
+    text-align: center;
 
-    opacity: .9;
+    font-size: 38px;
+
+    letter-spacing: 14px;
+
+    z-index: 1;
+
+    animation: flutuar 3s ease-in-out infinite;
 
 }
 
+
+.pokeball-fundo {
+
+    position: fixed;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            #ef5350 0 47%,
+            #222 47% 53%,
+            #f5f5f5 53%
+        );
+
+    opacity: .12;
+
+    right: -100px;
+
+    bottom: -100px;
+
+    border: 12px solid white;
+
+    z-index: 0;
+
+}
+
+
+.pokeball-fundo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    background: white;
+
+    border: 15px solid #222;
+
+    border-radius: 50%;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
 
 .principal {
 
+    position: relative;
+
+    z-index: 2;
+
     background: #ffffff;
 
-    width: 700px;
+    width: 760px;
 
     max-width: 100%;
 
-    padding: 45px;
+    padding: 40px;
 
     border-radius: 35px;
 
-    box-shadow:
-        0 15px 40px rgba(46, 125, 50, .20);
+    border: 7px solid #222;
 
-    border: 4px solid #b7dfb9;
+    box-shadow:
+
+        0 12px 0 #222,
+
+        0 25px 45px rgba(0,0,0,.25);
 
 }
 
+
+/* =========================
+   PLACA
+========================= */
+
+.placa {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.mini-pokeball {
+
+    font-size: 17px;
+
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
 
 h1 {
 
     text-align: center;
 
-    color: #2e7d32;
+    color: #e53935;
 
-    margin-bottom: 10px;
+    font-size: 42px;
 
-    font-size: 38px;
+    margin-bottom: 8px;
+
+    text-shadow:
+
+        3px 3px 0 #222,
+
+        -1px -1px 0 #fff;
 
 }
 
@@ -87,14 +227,58 @@ h1 {
 
     text-align: center;
 
-    color: #6b806d;
-
-    margin-bottom: 35px;
+    color: #555;
 
     font-size: 17px;
 
+    margin-bottom: 25px;
+
 }
 
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.status-item {
+
+    background: #fff8e1;
+
+    border: 3px solid #222;
+
+    border-radius: 15px;
+
+    padding: 10px 15px;
+
+    display: flex;
+
+    gap: 7px;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    box-shadow: 0 4px 0 #222;
+
+}
+
+
+/* =========================
+   OBJETIVOS
+========================= */
 
 .objetivos {
 
@@ -109,95 +293,208 @@ h1 {
 
 details {
 
-    background: #f5fbf5;
+    background: #f8fbff;
 
-    border-radius: 24px;
+    border-radius: 22px;
 
-    border: 3px solid #c5e3c7;
+    border: 4px solid #222;
 
     overflow: hidden;
 
-    transition: .3s;
+    transition: .25s;
+
+    box-shadow: 0 5px 0 #222;
 
 }
 
 
 details:hover {
 
-    border-color: #81c784;
+    transform: translateY(-3px);
 
 }
 
+
+/* =========================
+   BOTÕES
+========================= */
 
 summary {
 
     cursor: pointer;
 
-    background: #81c784;
-
-    padding: 20px;
+    padding: 18px;
 
     color: white;
 
-    font-size: 21px;
+    font-size: 20px;
 
     font-weight: bold;
 
     list-style: none;
 
-    transition: .3s;
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    transition: .2s;
 
 }
 
 
-summary:hover {
+summary::-webkit-details-marker {
 
-    background: #66bb6a;
-
-}
-
-
-summary::after {
-
-    content: "🌱";
-
-    float: right;
+    display: none;
 
 }
 
 
-details[open] summary {
+summary span:nth-child(1) {
 
-    background: #388e3c;
+    font-size: 28px;
 
 }
 
+
+summary span:nth-child(2) {
+
+    flex: 1;
+
+}
+
+
+summary small {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    opacity: .9;
+
+    margin-top: 2px;
+
+}
+
+
+summary b {
+
+    font-size: 22px;
+
+}
+
+
+/* CORES DOS BOTÕES */
+
+details:nth-child(1) summary {
+
+    background: #e53935;
+
+}
+
+
+details:nth-child(2) summary {
+
+    background: #f9a825;
+
+}
+
+
+details:nth-child(3) summary {
+
+    background: #8e44ad;
+
+}
+
+
+details:nth-child(4) summary {
+
+    background: #1976d2;
+
+}
+
+
+details:nth-child(1) summary:hover {
+
+    background: #c62828;
+
+}
+
+
+details:nth-child(2) summary:hover {
+
+    background: #f57f17;
+
+}
+
+
+details:nth-child(3) summary:hover {
+
+    background: #6a1b9a;
+
+}
+
+
+details:nth-child(4) summary:hover {
+
+    background: #0d47a1;
+
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
 
 .conteudo {
 
     padding: 28px;
 
-    color: #526653;
+    color: #444;
 
-    line-height: 1.8;
+    line-height: 1.7;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    background: #222;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
 
 }
 
 
 .conteudo h2 {
 
-    color: #2e7d32;
+    color: #222;
 
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
-    font-size: 25px;
+    font-size: 26px;
 
 }
 
 
 .conteudo h3 {
 
-    color: #43a047;
+    color: #1976d2;
 
     margin-top: 22px;
 
@@ -227,9 +524,28 @@ li {
 }
 
 
+li::marker {
+
+    content: "⭐ ";
+
+}
+
+
+/* =========================
+   DATAS
+========================= */
+
 .data {
 
-    background: #e8f5e9;
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #fff8e1;
+
+    border: 3px solid #222;
 
     padding: 13px 18px;
 
@@ -237,37 +553,140 @@ li {
 
     margin-top: 10px;
 
-    color: #2e7d32;
+}
+
+
+.data span {
+
+    font-size: 27px;
 
 }
 
 
+.data strong {
+
+    color: #e53935;
+
+}
+
+
+/* =========================
+   META
+========================= */
+
 .total {
 
-    background: #dcedc8;
+    background:
 
-    padding: 16px;
+        linear-gradient(
+            135deg,
+            #fff176,
+            #ffca28
+        );
 
-    border-radius: 20px;
+    border: 4px solid #222;
+
+    padding: 17px;
+
+    border-radius: 18px;
 
     text-align: center;
 
     font-weight: bold;
 
-    color: #33691e;
+    color: #222;
 
-    margin-top: 20px;
+    margin-top: 22px;
+
+    box-shadow: 0 5px 0 #222;
 
 }
 
 
+.xp {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #e53935;
+
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #333;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+}
+
+
+.rodape small {
+
+    display: inline-block;
+
+    margin-top: 7px;
+
+    font-weight: 400;
+
+    color: #666;
+
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes flutuar {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
+
+    body {
+
+        padding: 40px 12px;
+
+    }
+
 
     .principal {
 
-        padding: 25px;
+        padding: 22px 16px;
 
         border-radius: 25px;
+
+        border-width: 5px;
 
     }
 
@@ -279,16 +698,64 @@ li {
     }
 
 
+    .subtitulo {
+
+        font-size: 15px;
+
+    }
+
+
+    .status {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .status-item {
+
+        font-size: 12px;
+
+        padding: 8px 10px;
+
+    }
+
+
     summary {
 
-        font-size: 18px;
+        font-size: 17px;
+
+        padding: 15px;
+
+    }
+
+
+    summary span:nth-child(1) {
+
+        font-size: 24px;
+
+    }
+
+
+    .conteudo {
+
+        padding: 20px 17px;
+
+    }
+
+
+    .conteudo h2 {
+
+        font-size: 22px;
 
     }
 
 
     .decoracao {
 
-        font-size: 28px;
+        font-size: 25px;
+
+        letter-spacing: 5px;
 
     }
 
