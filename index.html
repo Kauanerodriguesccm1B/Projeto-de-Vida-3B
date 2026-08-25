@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Minha Jornada Pokémon</title>
+    <title>Minha Jornada Pokémon ⚡</title>
 
     <link rel="stylesheet" href="./style.css">
 
@@ -14,38 +15,44 @@
 
 <body>
 
-    <!-- POKÉMON DECORATIVOS -->
 
-    <div class="pokemon pikachu">⚡🐭</div>
-    <div class="pokemon eevee">🦊</div>
-    <div class="pokemon bulbasaur">🌱</div>
-    <div class="pokemon charmander">🔥</div>
-    <div class="pokemon squirtle">💧</div>
-    <div class="pokemon jigglypuff">🎀</div>
-    <div class="pokemon snorlax">💤</div>
+    <!-- =========================
+         POKÉMON DECORATIVOS
+    ========================== -->
 
-
-    <!-- POKÉ BALLS DECORATIVAS -->
-
-    <div class="pokeball ball1"></div>
-    <div class="pokeball ball2"></div>
-    <div class="pokeball ball3"></div>
+    <div class="pokemon pokemon-1">⚡</div>
+    <div class="pokemon pokemon-2">🦊</div>
+    <div class="pokemon pokemon-3">🌱</div>
+    <div class="pokemon pokemon-4">🔥</div>
+    <div class="pokemon pokemon-5">💧</div>
+    <div class="pokemon pokemon-6">🎀</div>
 
 
-    <!-- CONTEÚDO -->
+    <!-- POKÉ BALLS -->
+
+    <div class="pokeball ball-1"></div>
+    <div class="pokeball ball-2"></div>
+    <div class="pokeball ball-3"></div>
+
+
+    <!-- =========================
+         CONTAINER PRINCIPAL
+    ========================== -->
 
     <main class="principal">
 
 
-        <div class="placa">
+        <!-- CABEÇALHO -->
 
-            <span>🔴</span>
+        <div class="cabecalho">
 
-            <strong>
+            <div class="pokeball-mini"></div>
+
+            <span>
                 POKÉDEX DA TREINADORA
-            </strong>
+            </span>
 
-            <span>⚪</span>
+            <div class="pokeball-mini"></div>
 
         </div>
 
@@ -56,70 +63,114 @@
 
 
         <p class="subtitulo">
-            Escolha uma missão e comece sua aventura! 🎒✨
+            Cada objetivo é uma nova aventura! 🎒✨
         </p>
 
 
-        <!-- STATUS -->
+        <!-- =========================
+             STATUS
+        ========================== -->
 
-        <div class="status">
+        <section class="status">
 
-            <div class="status-item">
-                🧢
-                <span>
-                    <small>TREINADORA</small>
-                    <strong>LV. 17</strong>
+
+            <div class="status-card">
+
+                <span class="status-icon">
+                    🧢
                 </span>
+
+                <div>
+
+                    <small>
+                        TREINADORA
+                    </small>
+
+                    <strong>
+                        LV. 17
+                    </strong>
+
+                </div>
+
             </div>
 
 
-            <div class="status-item">
-                ⭐
-                <span>
-                    <small>MISSÕES</small>
-                    <strong>04</strong>
+            <div class="status-card">
+
+                <span class="status-icon">
+                    ⭐
                 </span>
+
+                <div>
+
+                    <small>
+                        MISSÕES
+                    </small>
+
+                    <strong>
+                        04
+                    </strong>
+
+                </div>
+
             </div>
 
 
-            <div class="status-item">
-                🏆
-                <span>
-                    <small>XP TOTAL</small>
-                    <strong>2850</strong>
+            <div class="status-card">
+
+                <span class="status-icon">
+                    🏆
                 </span>
+
+                <div>
+
+                    <small>
+                        XP TOTAL
+                    </small>
+
+                    <strong>
+                        2850
+                    </strong>
+
+                </div>
+
             </div>
 
-        </div>
+
+        </section>
 
 
-        <div class="objetivos">
+        <!-- =========================
+             MISSÕES
+        ========================== -->
+
+        <section class="missoes">
 
 
-            <!-- UEM -->
+            <!-- MISSÃO 1 -->
 
-            <details>
+            <details class="missao missao-vermelha">
 
                 <summary>
 
-                    <div class="icone-missao">
+                    <div class="icone">
                         🎓
                     </div>
 
-                    <div class="nome-missao">
+                    <div class="titulo-missao">
 
                         <strong>
                             DESAFIO DA UEM
                         </strong>
 
-                        <small>
+                        <span>
                             ⭐ MISSÃO PRINCIPAL
-                        </small>
+                        </span>
 
                     </div>
 
                     <div class="seta">
-                        ▼
+                        +
                     </div>
 
                 </summary>
@@ -127,7 +178,8 @@
 
                 <div class="conteudo">
 
-                    <div class="tag vermelho">
+
+                    <div class="tag">
                         🔥 BATALHA PRINCIPAL
                     </div>
 
@@ -140,7 +192,8 @@
                     <p>
                         Minha grande missão é me preparar para o
                         vestibular da UEM e conquistar minha vaga.
-                        Hora de treinar como uma verdadeira Mestre Pokémon! ⚡
+                        Hora de treinar como uma verdadeira
+                        Mestre Pokémon! ⚡
                     </p>
 
 
@@ -171,26 +224,30 @@
 
 
                     <h3>
-                        📅 DATAS DA JORNADA
+                        📅 DATAS IMPORTANTES
                     </h3>
 
 
                     <div class="data">
 
-                        <div class="item-icon">
+                        <span>
                             🏟️
-                        </div>
+                        </span>
 
                         <div>
-                            <small>DESAFIO</small>
+
+                            <small>
+                                DESAFIO
+                            </small>
 
                             <strong>
                                 Vestibular
                             </strong>
 
-                            <span>
+                            <p>
                                 12/07/2026
-                            </span>
+                            </p>
+
                         </div>
 
                     </div>
@@ -198,38 +255,45 @@
 
                     <div class="data">
 
-                        <div class="item-icon">
+                        <span>
                             🎁
-                        </div>
+                        </span>
 
                         <div>
-                            <small>RECOMPENSA</small>
+
+                            <small>
+                                RECOMPENSA
+                            </small>
 
                             <strong>
                                 Resultado
                             </strong>
 
-                            <span>
+                            <p>
                                 07/08/2026
-                            </span>
+                            </p>
+
                         </div>
 
                     </div>
 
 
-                    <div class="total">
+                    <div class="recompensa">
 
-                        🏆 OBJETIVO FINAL
+                        <span>
+                            🏆 OBJETIVO FINAL
+                        </span>
 
                         <strong>
                             Conseguir minha aprovação na UEM!
                         </strong>
 
-                        <span class="xp">
+                        <b>
                             ⭐ +1000 XP
-                        </span>
+                        </b>
 
                     </div>
+
 
                 </div>
 
@@ -237,30 +301,30 @@
 
 
 
-            <!-- FINANÇAS -->
+            <!-- MISSÃO 2 -->
 
-            <details>
+            <details class="missao missao-amarela">
 
                 <summary>
 
-                    <div class="icone-missao">
+                    <div class="icone">
                         💰
                     </div>
 
-                    <div class="nome-missao">
+                    <div class="titulo-missao">
 
                         <strong>
                             MISSÃO FINANCEIRA
                         </strong>
 
-                        <small>
+                        <span>
                             💎 RECURSOS
-                        </small>
+                        </span>
 
                     </div>
 
                     <div class="seta">
-                        ▼
+                        +
                     </div>
 
                 </summary>
@@ -268,7 +332,8 @@
 
                 <div class="conteudo">
 
-                    <div class="tag amarelo">
+
+                    <div class="tag">
                         💎 MISSÃO DE RECURSOS
                     </div>
 
@@ -340,20 +405,23 @@
                     </ul>
 
 
-                    <div class="total">
+                    <div class="recompensa">
 
-                        💎 ITEM RARO DESBLOQUEADO!
-
-                        <strong>
-                            Guardar dinheiro e cuidar da
-                            minha vida financeira.
-                        </strong>
-
-                        <span class="xp">
-                            ⭐ +500 XP
+                        <span>
+                            💎 ITEM RARO DESBLOQUEADO!
                         </span>
 
+                        <strong>
+                            Guardar dinheiro e cuidar
+                            da minha vida financeira.
+                        </strong>
+
+                        <b>
+                            ⭐ +500 XP
+                        </b>
+
                     </div>
+
 
                 </div>
 
@@ -361,30 +429,30 @@
 
 
 
-            <!-- PORTFÓLIO -->
+            <!-- MISSÃO 3 -->
 
-            <details>
+            <details class="missao missao-roxa">
 
                 <summary>
 
-                    <div class="icone-missao">
+                    <div class="icone">
                         🎨
                     </div>
 
-                    <div class="nome-missao">
+                    <div class="titulo-missao">
 
                         <strong>
                             CRIAR PORTFÓLIO
                         </strong>
 
-                        <small>
+                        <span>
                             ✨ CRIATIVIDADE
-                        </small>
+                        </span>
 
                     </div>
 
                     <div class="seta">
-                        ▼
+                        +
                     </div>
 
                 </summary>
@@ -392,7 +460,8 @@
 
                 <div class="conteudo">
 
-                    <div class="tag roxo">
+
+                    <div class="tag">
                         ✨ MISSÃO DE CRIATIVIDADE
                     </div>
 
@@ -439,20 +508,23 @@
                     </ul>
 
 
-                    <div class="total">
+                    <div class="recompensa">
 
-                        ✨ NOVA HABILIDADE!
+                        <span>
+                            ✨ NOVA HABILIDADE!
+                        </span>
 
                         <strong>
                             Construir um portfólio que represente
                             quem eu sou e o que sei fazer.
                         </strong>
 
-                        <span class="xp">
+                        <b>
                             ⭐ +750 XP
-                        </span>
+                        </b>
 
                     </div>
+
 
                 </div>
 
@@ -460,30 +532,30 @@
 
 
 
-            <!-- CURRÍCULO -->
+            <!-- MISSÃO 4 -->
 
-            <details>
+            <details class="missao missao-azul">
 
                 <summary>
 
-                    <div class="icone-missao">
+                    <div class="icone">
                         📄
                     </div>
 
-                    <div class="nome-missao">
+                    <div class="titulo-missao">
 
                         <strong>
                             FICHA DA TREINADORA
                         </strong>
 
-                        <small>
+                        <span>
                             🏅 PROFISSIONAL
-                        </small>
+                        </span>
 
                     </div>
 
                     <div class="seta">
-                        ▼
+                        +
                     </div>
 
                 </summary>
@@ -491,13 +563,14 @@
 
                 <div class="conteudo">
 
-                    <div class="tag azul">
+
+                    <div class="tag">
                         🏅 MISSÃO PROFISSIONAL
                     </div>
 
 
                     <h2>
-                        📄 Atualizar minha Ficha
+                        📄 Atualizar meu Currículo
                     </h2>
 
 
@@ -542,80 +615,94 @@
                     </ul>
 
 
-                    <div class="total">
+                    <div class="recompensa">
 
-                        🏅 MEDALHA EM TREINAMENTO!
+                        <span>
+                            🏅 MEDALHA EM TREINAMENTO!
+                        </span>
 
                         <strong>
                             Ter um currículo organizado e pronto
                             para novas oportunidades.
                         </strong>
 
-                        <span class="xp">
+                        <b>
                             ⭐ +600 XP
-                        </span>
+                        </b>
 
                     </div>
+
 
                 </div>
 
             </details>
 
 
-        </div>
+        </section>
 
 
-        <!-- POKÉMON DA EQUIPE -->
+        <!-- =========================
+             EQUIPE
+        ========================== -->
 
-        <div class="equipe">
+        <section class="equipe">
 
-            <h3>
-                ⭐ MINHA EQUIPE
-            </h3>
+            <h2>
+                ⭐ MINHA EQUIPE POKÉMON
+            </h2>
 
-            <div class="pokemon-equipe">
 
-                <div>
+            <div class="equipe-grid">
+
+                <div class="pokemon-card">
                     ⚡
-                    <span>Pikachu</span>
+                    <strong>Pikachu</strong>
+                    <small>Elétrico</small>
                 </div>
 
-                <div>
+                <div class="pokemon-card">
                     🔥
-                    <span>Charmander</span>
+                    <strong>Charmander</strong>
+                    <small>Fogo</small>
                 </div>
 
-                <div>
+                <div class="pokemon-card">
                     💧
-                    <span>Squirtle</span>
+                    <strong>Squirtle</strong>
+                    <small>Água</small>
                 </div>
 
-                <div>
+                <div class="pokemon-card">
                     🌱
-                    <span>Bulbasaur</span>
+                    <strong>Bulbasaur</strong>
+                    <small>Planta</small>
                 </div>
 
-                <div>
+                <div class="pokemon-card">
                     🦊
-                    <span>Eevee</span>
+                    <strong>Eevee</strong>
+                    <small>Normal</small>
                 </div>
 
-                <div>
+                <div class="pokemon-card">
                     🎀
-                    <span>Jigglypuff</span>
+                    <strong>Jigglypuff</strong>
+                    <small>Fada</small>
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
+
+        <!-- RODAPÉ -->
 
         <footer>
 
             ⚡ CONTINUE SUA JORNADA, TREINADORA! ⚡
 
             <small>
-                Cada objetivo conquistado é uma nova experiência.
+                "Toda grande aventura começa com o primeiro passo."
             </small>
 
         </footer>
@@ -624,29 +711,7 @@
     </main>
 
 
-    <!-- SCRIPT PARA ABRIR E FECHAR AS MISSÕES -->
-
-    <script>
-
-        const missoes = document.querySelectorAll("details");
-
-        missoes.forEach((missao) => {
-
-            const resumo = missao.querySelector("summary");
-
-            resumo.addEventListener("click", function (evento) {
-
-                evento.preventDefault();
-
-                missao.open = !missao.open;
-
-            });
-
-        });
-
-    </script>
-
-
 </body>
 
 </html>
+```
