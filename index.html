@@ -2,707 +2,645 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>⚡ Minha Jornada Pokémon ⚡</title>
+    <title>Pokémon Trainer Quest</title>
 
     <link rel="stylesheet" href="./style.css">
-
 </head>
-
 
 <body>
 
+<!-- =====================================================
+     FUNDO / DECORAÇÃO
+===================================================== -->
 
-<!-- =========================================
-     DECORAÇÕES POKÉMON
-========================================= -->
+<div class="pokemon pikachu">⚡</div>
+<div class="pokemon pokeball">🔴</div>
+<div class="pokemon pokeball2">🔴</div>
+<div class="pokemon star1">✦</div>
+<div class="pokemon star2">✦</div>
+<div class="pokemon star3">★</div>
 
-<div class="pokemon-decoracao pokebola-1">
-    🔴⚪
-</div>
-
-<div class="pokemon-decoracao raio-1">
-    ⚡
-</div>
-
-<div class="pokemon-decoracao estrela-1">
-    ⭐
-</div>
-
-<div class="pokemon-decoracao estrela-2">
-    ✦
-</div>
-
-<div class="pokemon-decoracao folha-1">
-    🌿
-</div>
-
-<div class="pokemon-decoracao pokebola-2">
-    🔴⚪
-</div>
-
-<div class="pokemon-decoracao raio-2">
-    ⚡
-</div>
-
-<div class="pokemon-decoracao estrela-3">
-    ✨
-</div>
-
-<div class="pokemon-decoracao mochila-1">
-    🎒
-</div>
-
-<div class="pokemon-decoracao medalha-1">
-    🏅
-</div>
+<div class="pixel-cloud cloud1">☁️</div>
+<div class="pixel-cloud cloud2">☁️</div>
 
 
-<!-- =========================================
-     PERSONAGENS / ELEMENTOS
-========================================= -->
+<!-- =====================================================
+     TELA INICIAL
+===================================================== -->
 
-<div class="personagem personagem-esquerda">
-    ⚡
-</div>
+<div id="telaInicial" class="tela-inicial">
 
-<div class="personagem personagem-direita">
-    🌟
-</div>
+    <div class="game-logo">
 
+        <div class="logo-top">
+            POKÉMON
+        </div>
 
-<!-- =========================================
-     CONTAINER PRINCIPAL
-========================================= -->
+        <div class="logo-bottom">
+            TRAINER QUEST
+        </div>
 
-<section class="principal">
+        <div class="logo-pokeball">
+            ⚪
+        </div>
 
-
-    <!-- CABEÇALHO -->
-
-    <div class="pokebola-titulo">
-        🔴⚪
     </div>
 
 
-    <div class="titulo-pequeno">
-        ✦ DIÁRIO DO TREINADOR ✦
-    </div>
-
-
-    <h1>
-        Minha Jornada Pokémon
-    </h1>
-
-
-    <p class="subtitulo">
-
-        ⚡ Sonhos, metas e conquistas
-        na minha própria aventura ⚡
-
+    <p class="press-start">
+        ▶ PRESS START ◀
     </p>
 
+    <p class="start-sub">
+        Clique para começar sua jornada
+    </p>
 
-    <div class="separador">
-
-        ✦ ───── 🔴⚪ ───── ✦
-
-    </div>
-
-
-
-    <!-- =========================================
-         OBJETIVOS
-    ========================================= -->
-
-    <div class="objetivos">
+</div>
 
 
 
-        <!-- =====================================
-             1 — UEM
-        ====================================== -->
+<!-- =====================================================
+     JOGO
+===================================================== -->
 
-        <details class="missao estudos">
-
-
-            <summary>
-
-                <span class="icone">
-                    🎓
-                </span>
+<main id="jogo" class="jogo escondido">
 
 
-                <span class="nome">
+    <!-- TOPO -->
 
-                    Aprovação na UEM
+    <header class="hud">
 
-                    <small>
-                        📚 Minha grande missão
-                    </small>
+        <div class="trainer">
 
-                </span>
-
-
-                <span class="seta">
-                    ⚡
-                </span>
-
-            </summary>
-
-
-
-            <div class="conteudo">
-
-
-                <div class="etiqueta">
-                    🎓 MISSÃO PRINCIPAL
-                </div>
-
-
-                <h2>
-                    📚 Plano de Estudos
-                </h2>
-
-
-                <p>
-
-                    Meu objetivo é me preparar para o
-                    vestibular da UEM e conquistar minha
-                    aprovação.
-
-                </p>
-
-
-                <h3>
-                    ⚡ Minha rotina de treinamento
-                </h3>
-
-
-                <ul>
-
-                    <li>
-                        📖 Curso pré-vestibular Alfa — segunda a sexta;
-                    </li>
-
-                    <li>
-                        ⏰ Das 19:00 às 22:30;
-                    </li>
-
-                    <li>
-                        ✍️ Fazer uma redação por semana;
-                    </li>
-
-                    <li>
-                        📝 Fazer 2 simulados por mês;
-                    </li>
-
-                </ul>
-
-
-                <h3>
-                    🏆 Datas importantes
-                </h3>
-
-
-                <div class="data">
-
-                    <strong>
-                        🏅 Vestibular
-                    </strong>
-
-                    <span>
-                        12/07/2026
-                    </span>
-
-                </div>
-
-
-                <div class="data">
-
-                    <strong>
-                        ⭐ Resultado
-                    </strong>
-
-                    <span>
-                        07/08/2026
-                    </span>
-
-                </div>
-
-
-                <div class="recompensa">
-
-                    <span>
-                        🏆 RECOMPENSA
-                    </span>
-
-                    <strong>
-                        Conseguir minha aprovação na UEM!
-                    </strong>
-
-                    <small>
-                        ⚡ Cada sessão de estudo me deixa mais perto.
-                    </small>
-
-                </div>
-
-
+            <div class="trainer-avatar">
+                🧢
             </div>
 
+            <div>
 
-        </details>
-
-
-
-        <!-- =====================================
-             2 — FINANÇAS
-        ====================================== -->
-
-        <details class="missao dinheiro">
-
-
-            <summary>
-
-                <span class="icone">
-                    💰
+                <span class="trainer-label">
+                    TREINADORA
                 </span>
 
-
-                <span class="nome">
-
-                    Finanças
-
-                    <small>
-                        💎 Meu tesouro Pokémon
-                    </small>
-
-                </span>
-
-
-                <span class="seta">
-                    💎
-                </span>
-
-            </summary>
-
-
-
-            <div class="conteudo">
-
-
-                <div class="etiqueta">
-                    💎 MISSÃO DO TESOURO
-                </div>
-
-
-                <h2>
-                    💰 Meu Planejamento Financeiro
-                </h2>
-
-
-                <h3>
-                    📥 Minha renda
-                </h3>
-
-
-                <div class="financeiro">
-
-                    <div>
-
-                        <span>
-                            💼 Salário
-                        </span>
-
-                        <strong>
-                            R$ 740,00
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            ⭐ Renda extra
-                        </span>
-
-                        <strong>
-                            R$ 140,00
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <h3>
-                    🎒 Organização do dinheiro
-                </h3>
-
-
-                <ul>
-
-                    <li>
-                        💎 Guardar: <strong>R$ 500,00</strong>
-                    </li>
-
-                    <li>
-                        🧠 Terapia: <strong>R$ 80,00</strong>
-                    </li>
-
-                    <li>
-                        ✂️ Corte de cabelo: <strong>R$ 40,00</strong>
-                    </li>
-
-                    <li>
-                        🛍️ Parcela Shein: <strong>R$ 90,00</strong>
-                    </li>
-
-                    <li>
-                        🎮 Sobra do salário: <strong>Gasto livre</strong>
-                    </li>
-
-                </ul>
-
-
-                <div class="recompensa">
-
-                    <span>
-                        💎 TESOURO DO TREINADOR
-                    </span>
-
-                    <strong>
-                        Guardar dinheiro e cuidar da minha vida financeira!
-                    </strong>
-
-                    <small>
-                        ✨ Pequenas economias também são grandes conquistas.
-                    </small>
-
-                </div>
-
+                <strong>
+                    MILENY
+                </strong>
 
             </div>
-
-
-        </details>
-
-
-
-        <!-- =====================================
-             3 — JORNADA POKÉMON
-        ====================================== -->
-
-        <details class="missao jornada">
-
-
-            <summary>
-
-                <span class="icone">
-                    ⚡
-                </span>
-
-
-                <span class="nome">
-
-                    Minha Jornada Pokémon
-
-                    <small>
-                        🎒 Aprender, evoluir e conquistar
-                    </small>
-
-                </span>
-
-
-                <span class="seta">
-                    ✨
-                </span>
-
-            </summary>
-
-
-
-            <div class="conteudo">
-
-
-                <div class="etiqueta">
-                    ⚡ JORNADA DO TREINADOR
-                </div>
-
-
-                <h2>
-                    🎒 Minha Evolução
-                </h2>
-
-
-                <p>
-
-                    Assim como um treinador Pokémon
-                    precisa aprender e evoluir durante sua
-                    jornada, quero desenvolver minhas
-                    habilidades e descobrir novos talentos.
-
-                </p>
-
-
-                <h3>
-                    ✨ Minhas próximas evoluções
-                </h3>
-
-
-
-                <div class="evolucao">
-
-                    <span class="evolucao-icone">
-                        🧠
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            Conhecimento
-                        </strong>
-
-                        <small>
-                            Aprender coisas novas e continuar estudando.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="evolucao">
-
-                    <span class="evolucao-icone">
-                        🎨
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            Criatividade
-                        </strong>
-
-                        <small>
-                            Desenvolver meus talentos e projetos.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="evolucao">
-
-                    <span class="evolucao-icone">
-                        💻
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            Novas habilidades
-                        </strong>
-
-                        <small>
-                            Aprender ferramentas e tecnologias.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="evolucao">
-
-                    <span class="evolucao-icone">
-                        🤝
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            Experiências
-                        </strong>
-
-                        <small>
-                            Conhecer pessoas e aproveitar oportunidades.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="recompensa">
-
-                    <span>
-                        🏅 MEDALHA DA JORNADA
-                    </span>
-
-                    <strong>
-                        Evoluir um pouquinho todos os dias!
-                    </strong>
-
-                    <small>
-                        ⚡ Cada conquista aumenta minha experiência.
-                    </small>
-
-                </div>
-
-
-
-                <div class="frase-pokemon">
-
-                    <span>
-                        🔴
-                    </span>
-
-                    <strong>
-                        Minha aventura está apenas começando!
-                    </strong>
-
-                    <span>
-                        ⚪
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </details>
-
-
-
-        <!-- =====================================
-             4 — CURRÍCULO
-        ====================================== -->
-
-        <details class="missao curriculo-missao">
-
-
-            <summary>
-
-                <span class="icone">
-                    📜
-                </span>
-
-
-                <span class="nome">
-
-                    Meu Currículo
-
-                    <small>
-                        🏆 Minha ficha de treinador
-                    </small>
-
-                </span>
-
-
-                <span class="seta">
-                    ⭐
-                </span>
-
-            </summary>
-
-
-
-            <div class="conteudo">
-
-
-                <div class="etiqueta">
-                    📜 FICHA DO TREINADOR
-                </div>
-
-
-                <h2>
-                    🏆 Meu Currículo
-                </h2>
-
-
-                <p>
-
-                    Meu currículo reúne minha trajetória,
-                    formação, habilidades e experiências.
-
-                </p>
-
-
-                <a
-                    class="curriculo"
-                    href="https://docs.google.com/document/d/1DZ7XceDYclyIZx7q3ulrJ3BSYUECbXj5XVKmpyi3kEE/edit?tab=t.0"
-                    target="_blank"
-                >
-
-                    🎒 Abrir minha ficha
-
-                </a>
-
-
-            </div>
-
-
-        </details>
-
-
-    </div>
-
-
-
-    <!-- =========================================
-         RODAPÉ
-    ========================================= -->
-
-    <div class="rodape">
-
-
-        <div class="rodape-elementos">
-
-            🔴⚪
-
-            ✨
-
-            ⚡
-
-            ⭐
-
-            ✨
-
-            🔴⚪
 
         </div>
 
 
-        <strong>
-            ✨ Toda jornada começa com um sonho. ✨
-        </strong>
+        <div class="level">
+
+            <span>LV</span>
+
+            <strong>17</strong>
+
+        </div>
 
 
-        <small>
-            ⚡ Agora é hora de treinar para conquistá-lo!
-        </small>
+        <div class="xp">
+
+            <span>XP</span>
+
+            <div class="xp-bar">
+
+                <div class="xp-fill"></div>
+
+            </div>
+
+        </div>
+
+    </header>
 
 
-    </div>
+
+    <!-- =================================================
+         PAINEL PRINCIPAL
+    ================================================= -->
+
+    <section class="painel">
 
 
-</section>
+        <div class="topo-painel">
 
+            <div>
+
+                <span class="mini-label">
+                    ╔═ STATUS DA JORNADA ═╗
+                </span>
+
+                <h1>
+                    🎮 MINHAS MISSÕES
+                </h1>
+
+            </div>
+
+            <div class="pokeballs">
+
+                🔴 🔴 🔴
+
+            </div>
+
+        </div>
+
+
+        <p class="descricao">
+
+            Sua aventura está apenas começando!
+            Complete suas missões e conquiste seus objetivos.
+
+        </p>
+
+
+
+        <!-- =================================================
+             MISSÕES
+        ================================================= -->
+
+        <div class="missoes">
+
+
+            <!-- MISSÃO 1 -->
+
+            <details class="missao estudos">
+
+                <summary>
+
+                    <span class="icone-missao">
+                        📚
+                    </span>
+
+                    <span class="texto-missao">
+
+                        <strong>
+                            MISSÃO 01 — ESTUDOS
+                        </strong>
+
+                        <small>
+                            Conquiste uma ótima nota no ENEM
+                        </small>
+
+                    </span>
+
+                    <span class="badge">
+                        LV. ⭐
+                    </span>
+
+                </summary>
+
+
+                <div class="conteudo">
+
+                    <div class="status">
+                        🟢 MISSÃO ATIVA
+                    </div>
+
+                    <h2>
+                        📚 Treinamento do Conhecimento
+                    </h2>
+
+                    <p>
+                        Preparação completa para conseguir
+                        uma ótima nota no ENEM e transformar
+                        meus sonhos em realidade.
+                    </p>
+
+                    <h3>
+                        ⚔️ ROTINA DE TREINAMENTO
+                    </h3>
+
+                    <ul>
+
+                        <li>🌟 Segunda — Matemática e Redação</li>
+
+                        <li>🧪 Terça — Biologia e Química</li>
+
+                        <li>📖 Quarta — Português e Literatura</li>
+
+                        <li>🗺️ Quinta — História e Geografia</li>
+
+                        <li>⚡ Sexta — Física e exercícios</li>
+
+                        <li>🎯 Sábado — Simulado completo</li>
+
+                        <li>🌙 Domingo — Revisão e descanso</li>
+
+                    </ul>
+
+
+                    <div class="recompensa">
+
+                        <span>🏆 RECOMPENSA</span>
+
+                        <strong>
+                            Uma ótima nota no ENEM!
+                        </strong>
+
+                        <small>
+                            +500 XP de conhecimento
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- MISSÃO 2 -->
+
+            <details class="missao carreira">
+
+                <summary>
+
+                    <span class="icone-missao">
+                        🧠
+                    </span>
+
+                    <span class="texto-missao">
+
+                        <strong>
+                            MISSÃO 02 — CARREIRA
+                        </strong>
+
+                        <small>
+                            Construindo meu futuro
+                        </small>
+
+                    </span>
+
+                    <span class="badge">
+                        🔮 FUTURO
+                    </span>
+
+                </summary>
+
+
+                <div class="conteudo">
+
+                    <div class="status">
+                        🟢 MISSÃO ATIVA
+                    </div>
+
+                    <h2>
+                        🧠 Projeto: Psicologia Infantil
+                    </h2>
+
+                    <p>
+                        Meu sonho é estudar Psicologia Infantil
+                        e abrir minha própria clínica.
+                    </p>
+
+                    <h3>
+                        🗺️ CAMINHO DA JORNADA
+                    </h3>
+
+                    <ul>
+
+                        <li>🎓 Finalizar o Ensino Médio</li>
+
+                        <li>📚 Entrar na faculdade de Psicologia</li>
+
+                        <li>📝 Fazer estágios</li>
+
+                        <li>🧸 Me especializar em crianças</li>
+
+                        <li>💼 Ganhar experiência</li>
+
+                        <li>💰 Guardar dinheiro</li>
+
+                        <li>🏥 Abrir minha própria clínica</li>
+
+                    </ul>
+
+
+                    <div class="recompensa">
+
+                        <span>🏆 GRANDE RECOMPENSA</span>
+
+                        <strong>
+                            Minha própria clínica infantil!
+                        </strong>
+
+                        <small>
+                            Uma nova fase será desbloqueada.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- MISSÃO 3 -->
+
+            <details class="missao aventuras">
+
+                <summary>
+
+                    <span class="icone-missao">
+                        🗺️
+                    </span>
+
+                    <span class="texto-missao">
+
+                        <strong>
+                            MISSÃO 03 — AVENTURAS
+                        </strong>
+
+                        <small>
+                            Explore novos lugares
+                        </small>
+
+                    </span>
+
+                    <span class="badge">
+                        🌎 EXPLORAR
+                    </span>
+
+                </summary>
+
+
+                <div class="conteudo">
+
+                    <div class="status">
+                        🔵 MISSÃO DE EXPLORAÇÃO
+                    </div>
+
+                    <h2>
+                        🗺️ Lugares que quero conhecer
+                    </h2>
+
+                    <p>
+                        Assim como um treinador explora
+                        novas regiões, quero conhecer o mundo.
+                    </p>
+
+
+                    <div class="aventura">
+
+                        <span>🌸</span>
+
+                        <div>
+                            <strong>Japão</strong>
+                            <small>Julho de 2028 — R$ 18.000</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="aventura">
+
+                        <span>🗼</span>
+
+                        <div>
+                            <strong>França</strong>
+                            <small>Julho de 2029 — R$ 15.000</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="aventura">
+
+                        <span>🍕</span>
+
+                        <div>
+                            <strong>Itália</strong>
+                            <small>Julho de 2030 — R$ 14.000</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="aventura">
+
+                        <span>🗽</span>
+
+                        <div>
+                            <strong>Estados Unidos</strong>
+                            <small>Julho de 2031 — R$ 17.000</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="recompensa">
+
+                        <span>🌎 TESOURO DA EXPLORAÇÃO</span>
+
+                        <strong>
+                            R$ 64.000
+                        </strong>
+
+                        <small>
+                            Valor total das aventuras
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- MISSÃO 4 -->
+
+            <details class="missao dinheiro">
+
+                <summary>
+
+                    <span class="icone-missao">
+                        💰
+                    </span>
+
+                    <span class="texto-missao">
+
+                        <strong>
+                            MISSÃO 04 — FINANÇAS
+                        </strong>
+
+                        <small>
+                            Acumule seu tesouro
+                        </small>
+
+                    </span>
+
+                    <span class="badge">
+                        💎 RARO
+                    </span>
+
+                </summary>
+
+
+                <div class="conteudo">
+
+                    <div class="status">
+                        🟡 MISSÃO FINANCEIRA
+                    </div>
+
+                    <h2>
+                        💰 Tesouro da Treinadora
+                    </h2>
+
+                    <p>
+                        Salário mensal:
+                        <strong>R$ 1.000</strong>
+                    </p>
+
+                    <p>
+                        Gastos:
+                        <strong>R$ 410</strong>
+                    </p>
+
+                    <p>
+                        Valor guardado:
+                        <strong>R$ 590 por mês</strong>
+                    </p>
+
+
+                    <h3>
+                        📊 RESULTADO
+                    </h3>
+
+                    <div class="recompensa">
+
+                        <span>💎 TESOURO ACUMULADO</span>
+
+                        <strong>
+                            R$ 7.080
+                        </strong>
+
+                        <small>
+                            Guardados até o final do ano
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+
+
+            <!-- MISSÃO 5 -->
+
+            <details class="missao curriculo">
+
+                <summary>
+
+                    <span class="icone-missao">
+                        📜
+                    </span>
+
+                    <span class="texto-missao">
+
+                        <strong>
+                            MISSÃO 05 — CURRÍCULO
+                        </strong>
+
+                        <small>
+                            Prepare seu perfil de treinadora
+                        </small>
+
+                    </span>
+
+                    <span class="badge">
+                        🎒 ITEM
+                    </span>
+
+                </summary>
+
+
+                <div class="conteudo">
+
+                    <div class="status">
+                        🟢 ITEM DESBLOQUEADO
+                    </div>
+
+                    <h2>
+                        📜 Meu Currículo
+                    </h2>
+
+                    <p>
+                        Consulte meu currículo para conhecer
+                        minha trajetória, habilidades e experiências.
+                    </p>
+
+
+                    <a
+                        class="botao-curriculo"
+                        href="https://docs.google.com/document/d/1DZ7XceDYclyIZx7q3ulrJ3BSYUECbXj5XVKmpyi3kEE/edit?tab=t.0"
+                        target="_blank">
+
+                        🎒 ABRIR CURRÍCULO
+
+                    </a>
+
+                </div>
+
+            </details>
+
+
+        </div>
+
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+
+            <div class="pokemon-footer">
+                ⚡ 🐭 🔥 💧 🌿
+            </div>
+
+            <strong>
+                ✨ SUA JORNADA CONTINUA! ✨
+            </strong>
+
+            <small>
+                Complete suas missões e torne-se a melhor versão de você.
+            </small>
+
+        </footer>
+
+    </section>
+
+</main>
+
+
+
+<script>
+
+const telaInicial = document.getElementById("telaInicial");
+const jogo = document.getElementById("jogo");
+
+telaInicial.addEventListener("click", function () {
+
+    telaInicial.classList.add("sumir");
+
+    setTimeout(() => {
+
+        telaInicial.style.display = "none";
+
+        jogo.classList.remove("escondido");
+
+        jogo.classList.add("aparecer");
+
+    }, 500);
+
+});
+
+</script>
 
 </body>
 
