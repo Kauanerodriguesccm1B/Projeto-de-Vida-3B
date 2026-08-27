@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
-
-/* =========================================
-   RESET
-========================================= */
 
 * {
     margin: 0;
@@ -11,131 +7,189 @@
     box-sizing: border-box;
 }
 
+
 html {
     min-height: 100%;
 }
 
+
 body {
+
     min-height: 100vh;
 
-    padding: 55px 20px 70px;
+    padding: 50px 20px;
 
     overflow-x: hidden;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'VT323', monospace;
+
+    color: #222;
 
     background:
-        radial-gradient(
-            circle at 15% 15%,
-            rgba(255,255,255,.25),
-            transparent 18%
-        ),
 
         radial-gradient(
-            circle at 85% 35%,
-            rgba(255,255,255,.18),
+            circle at 20% 20%,
+            rgba(255,255,255,.15),
             transparent 20%
         ),
 
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,255,255,.08),
+            transparent 25%
+        ),
+
         linear-gradient(
-            180deg,
-            #f6c928 0%,
-            #f59d24 25%,
-            #45a9e8 65%,
-            #176aa7 100%
+            135deg,
+            #5b2c83,
+            #3264a8 45%,
+            #4ba36d
         );
+
 }
 
 
-/* =========================================
-   DECORAÇÕES
-========================================= */
+/* =========================
+   PIXEL GRID
+========================= */
 
-.pokemon {
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .08;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 25px 25px;
+
+}
+
+
+/* =========================
+   DECORAÇÕES
+========================= */
+
+.pokeball {
+
     position: fixed;
 
     z-index: 0;
 
-    pointer-events: none;
+    font-family: Arial;
 
-    user-select: none;
+    color: white;
 
-    filter:
-        drop-shadow(0 5px 5px rgba(0,0,0,.25));
+    font-size: 70px;
 
-    animation: flutuar 4s ease-in-out infinite;
+    opacity: .15;
+
 }
 
 
-.pika {
-    left: 3%;
+.ball1 {
+    top: 8%;
+    left: 4%;
+    transform: rotate(-20deg);
+}
+
+
+.ball2 {
+    right: 3%;
     bottom: 8%;
-    font-size: 80px;
+    transform: rotate(20deg);
 }
 
 
-.pokebola {
-    right: 4%;
-    top: 7%;
-    font-size: 58px;
+.spark {
 
-    animation-delay: 1s;
+    position: fixed;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    animation: sparkle 1.8s infinite alternate;
+
 }
 
 
-.pokebola2 {
-    left: 5%;
-    top: 20%;
-    font-size: 45px;
-
-    animation-delay: 2s;
+.spark1 {
+    top: 15%;
+    left: 25%;
 }
 
 
-.estrela {
-    right: 18%;
-    top: 18%;
-    font-size: 38px;
-
-    animation-delay: .5s;
+.spark2 {
+    top: 30%;
+    right: 12%;
+    animation-delay: .4s;
 }
 
 
-.estrela2 {
-    left: 20%;
-    bottom: 14%;
-    font-size: 35px;
-
-    animation-delay: 1.5s;
+.spark3 {
+    bottom: 25%;
+    left: 8%;
+    animation-delay: .8s;
 }
 
 
-.raio {
-    right: 7%;
-    bottom: 10%;
-    font-size: 55px;
-
-    animation-delay: 2s;
+.spark4 {
+    bottom: 12%;
+    right: 25%;
+    animation-delay: 1.2s;
 }
 
 
-.folha {
-    left: 7%;
-    top: 40%;
-    font-size: 40px;
+.grass {
 
-    animation-delay: 2.5s;
+    position: fixed;
+
+    font-size: 50px;
+
+    opacity: .6;
+
 }
 
 
-/* =========================================
-   CONSOLE PRINCIPAL
-========================================= */
+.grass1 {
+    left: 2%;
+    bottom: 2%;
+}
+
+
+.grass2 {
+    right: 2%;
+    top: 4%;
+}
+
+
+/* =========================
+   GAME
+========================= */
 
 .game {
+
     position: relative;
 
-    z-index: 2;
+    z-index: 5;
 
     width: 760px;
 
@@ -143,354 +197,297 @@ body {
 
     margin: auto;
 
-    padding: 28px;
+    padding: 30px;
 
     background:
+
         linear-gradient(
             145deg,
-            #ffffff,
-            #f2f9ff
+            #fefefe,
+            #e9f2ff
         );
 
-    border: 6px solid #202020;
+    border: 7px solid #222;
 
-    border-radius: 30px;
+    border-radius: 20px;
 
     box-shadow:
 
-        0 0 0 5px #f5c928,
+        0 0 0 5px #ffd83d,
 
-        0 20px 55px rgba(0,0,0,.4);
+        0 20px 60px rgba(0,0,0,.45);
+
 }
 
 
-/* =========================================
-   TOPO — NOVO
-========================================= */
+/* =========================
+   HEADER
+========================= */
 
-.topo {
+.header {
 
-    display: flex;
+    position: relative;
 
-    align-items: center;
+    padding: 25px;
 
-    justify-content: space-between;
+    text-align: center;
 
-    gap: 20px;
-
-    padding: 10px 5px 20px;
-
-    border-bottom: 3px solid #e1e1e1;
-}
-
-
-/* LOGO */
-
-.logo {
-    display: flex;
-
-    align-items: center;
-
-    font-family: 'Titan One', sans-serif;
-
-    font-size: 32px;
-
-    letter-spacing: 1px;
-
-    color: #ffcb05;
-
-    -webkit-text-stroke: 2px #2a75bb;
-
-    text-shadow:
-        3px 4px 0 #1c4f85;
-}
-
-
-.logo strong {
-    color: #ef3d35;
-}
-
-
-/* STATUS */
-
-.status {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    color: #555;
-}
-
-
-.status span:first-child {
-    padding: 8px 12px;
-
-    background: #edf5fb;
-
-    border: 2px solid #c8dce9;
-
-    border-radius: 10px;
-}
-
-
-.online {
-    color: #179c4c;
-}
-
-
-/* =========================================
-   PERFIL DA KAUANE
-========================================= */
-
-.perfil {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    margin-top: 25px;
-
-    padding: 20px;
+    color: white;
 
     background:
 
         linear-gradient(
             135deg,
-            #fff4b7,
-            #fffdf0
+            #e63946,
+            #ef476f
         );
 
-    border: 3px solid #f0bd21;
-
-    border-radius: 22px;
+    border: 5px solid #222;
 
     box-shadow:
-        0 5px 0 #dcae19;
+        6px 6px 0 #222;
+
 }
 
 
-.avatar {
+.game-label {
 
-    width: 78px;
-    height: 78px;
+    font-family: 'Press Start 2P', monospace;
 
-    display: flex;
+    font-size: 10px;
 
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 12px;
 
-    flex-shrink: 0;
-
-    background: #ffcc28;
-
-    border: 5px solid #252525;
-
-    border-radius: 50%;
-
-    font-size: 40px;
-
-    box-shadow:
-        0 4px 0 #b98200;
-}
-
-
-.perfil-texto {
-    flex: 1;
-}
-
-
-.label {
-
-    display: inline-block;
-
-    margin-bottom: 5px;
-
-    color: #2777b5;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
 }
 
 
 h1 {
 
-    margin: 0;
+    font-family: 'Press Start 2P', monospace;
 
-    color: #242424;
+    font-size: 38px;
 
-    font-family: 'Titan One', sans-serif;
+    text-shadow:
+        4px 4px 0 #222;
 
-    font-size: 29px;
-
-    line-height: 1.25;
 }
 
 
-.perfil p {
+.subtitle {
 
-    margin-top: 7px;
+    margin-top: 15px;
 
-    color: #687887;
+    font-size: 22px;
 
-    font-size: 14px;
 }
 
 
-/* =========================================
-   XP
-========================================= */
+.level {
 
-.xp-box {
+    position: absolute;
 
-    margin-top: 18px;
+    right: 15px;
 
-    padding: 15px 17px;
+    top: 15px;
 
-    background: #242424;
+    padding: 7px 10px;
 
-    color: white;
+    background: #ffd83d;
 
-    border-radius: 14px;
+    color: #222;
+
+    border: 3px solid #222;
+
+    font-weight: bold;
+
 }
 
 
-.xp-top {
+/* =========================
+   TRAINER CARD
+========================= */
+
+.trainer-card {
 
     display: flex;
 
-    justify-content: space-between;
+    gap: 25px;
 
-    margin-bottom: 8px;
+    margin: 30px 0;
 
-    font-size: 11px;
+    padding: 20px;
 
-    font-weight: 700;
+    background: #fff;
+
+    border: 5px solid #222;
+
+    box-shadow:
+        5px 5px 0 #222;
+
 }
 
 
-.xp-bar {
+.trainer-photo {
 
-    height: 13px;
+    text-align: center;
 
-    overflow: hidden;
-
-    background: #555;
-
-    border: 2px solid white;
-
-    border-radius: 20px;
 }
 
 
-.xp-progresso {
+.photo-frame {
 
-    width: 72%;
+    width: 145px;
+
+    height: 165px;
+
+    padding: 7px;
+
+    background: #ffd83d;
+
+    border: 5px solid #222;
+
+}
+
+
+.photo-placeholder {
+
+    width: 100%;
 
     height: 100%;
 
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+
     background:
         linear-gradient(
-            90deg,
-            #46d56b,
-            #8bea68
+            135deg,
+            #8ed1fc,
+            #d9f1ff
         );
+
 }
 
 
-.xp-box small {
+.trainer-name {
 
-    display: block;
+    margin-top: 8px;
 
-    margin-top: 7px;
+    font-family: 'Press Start 2P', monospace;
 
-    color: #d9d9d9;
+    font-size: 12px;
 
-    font-size: 10px;
 }
 
 
-/* =========================================
-   MISSÕES
-========================================= */
+.trainer-info {
 
-.missoes {
-    margin-top: 27px;
+    flex: 1;
+
 }
 
 
-.titulo-secao {
+.status-title {
+
+    margin-bottom: 15px;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 12px;
+
+    color: #e63946;
+
+}
+
+
+.status-line {
 
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     margin-bottom: 15px;
+
 }
 
 
-.titulo-secao > span {
-    font-size: 29px;
+.status-line span {
+
+    font-weight: bold;
+
 }
 
 
-.titulo-secao strong {
+.bar {
 
-    display: block;
+    flex: 1;
 
-    color: #242424;
+    height: 18px;
 
-    font-family: 'Titan One', sans-serif;
+    background: #ddd;
 
-    font-size: 20px;
+    border: 3px solid #222;
+
 }
 
 
-.titulo-secao small {
+.bar-fill {
 
-    color: #7a8790;
+    width: 75%;
 
-    font-size: 12px;
+    height: 100%;
+
+    background: #55b85a;
+
 }
 
 
-/* =========================================
-   MISSÕES
-========================================= */
+/* =========================
+   MENU
+========================= */
 
-.missao {
+.menu-title {
 
-    margin-bottom: 16px;
+    display: flex;
 
-    overflow: hidden;
+    justify-content: space-between;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+    color: white;
+
+    background: #222;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+details {
+
+    margin-bottom: 15px;
+
+    border: 4px solid #222;
 
     background: white;
 
-    border: 4px solid #242424;
-
-    border-radius: 18px;
-
     box-shadow:
-        5px 5px 0 rgba(0,0,0,.16);
+        4px 4px 0 rgba(0,0,0,.3);
 
-    transition: .2s;
-}
-
-
-.missao:hover {
-    transform: translateY(-3px);
 }
 
 
@@ -500,9 +497,9 @@ summary {
 
     align-items: center;
 
-    gap: 13px;
+    gap: 15px;
 
-    padding: 15px;
+    padding: 17px;
 
     cursor: pointer;
 
@@ -510,7 +507,10 @@ summary {
 
     color: white;
 
+    background: #3f7cac;
+
     user-select: none;
+
 }
 
 
@@ -519,330 +519,340 @@ summary::-webkit-details-marker {
 }
 
 
-/* CORES */
+summary:hover {
 
-.estudos summary {
-    background:
-        linear-gradient(
-            135deg,
-            #2477b9,
-            #42a9e8
-        );
+    filter: brightness(1.1);
+
 }
 
 
-.dinheiro summary {
-    background:
-        linear-gradient(
-            135deg,
-            #178d48,
-            #45c86d
-        );
-}
+summary .button-icon {
 
+    width: 48px;
 
-.portfolio summary {
-    background:
-        linear-gradient(
-            135deg,
-            #8847a6,
-            #b978d1
-        );
-}
-
-
-.curriculo-missao summary {
-    background:
-        linear-gradient(
-            135deg,
-            #d86d1e,
-            #f19a43
-        );
-}
-
-
-.icone-missao {
-
-    width: 52px;
-    height: 52px;
+    height: 48px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
-    flex-shrink: 0;
-
-    background: rgba(255,255,255,.18);
-
-    border: 3px solid rgba(255,255,255,.9);
-
-    border-radius: 13px;
-
-    font-size: 27px;
-}
-
-
-.missao-nome {
-    flex: 1;
-}
-
-
-.missao-nome strong {
-
-    display: block;
-
-    font-size: 18px;
-}
-
-
-.missao-nome small {
-
-    display: block;
-
-    margin-top: 3px;
-
-    font-size: 11px;
-}
-
-
-.badge {
-
-    padding: 6px 9px;
-
-    background: rgba(0,0,0,.22);
-
-    border: 2px solid rgba(255,255,255,.65);
-
-    border-radius: 8px;
-
-    font-size: 8px;
-
-    font-weight: 700;
-}
-
-
-.seta {
-
-    font-size: 15px;
-
-    transition: .2s;
-}
-
-
-details[open] .seta {
-    transform: rotate(180deg);
-}
-
-
-/* =========================================
-   CONTEÚDO
-========================================= */
-
-.conteudo {
-
-    padding: 25px;
-
-    background: #f9fcff;
-
-    color: #4e5e6a;
-
-    line-height: 1.7;
-}
-
-
-.tag {
-
-    display: inline-block;
-
-    margin-bottom: 15px;
-
-    padding: 7px 11px;
-
-    background: #252525;
-
-    color: #fff;
-
-    border-radius: 8px;
-
-    font-size: 9px;
-
-    font-weight: 700;
-}
-
-
-.conteudo h2 {
-
-    margin-bottom: 12px;
-
-    color: #252525;
-
-    font-family: 'Titan One', sans-serif;
-
-    font-size: 21px;
-}
-
-
-.conteudo h3 {
-
-    margin-top: 20px;
-
-    margin-bottom: 8px;
-
-    color: #2678b6;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-
-.conteudo p {
-    margin-bottom: 12px;
-}
-
-
-ul {
-    padding-left: 22px;
-}
-
-
-li {
-    margin-bottom: 8px;
-}
-
-
-li::marker {
-    content: "▶ ";
-    color: #f2bb13;
-}
-
-
-/* =========================================
-   DATAS
-========================================= */
-
-.info {
-
-    display: flex;
-
-    justify-content: space-between;
-
     align-items: center;
 
-    margin-top: 8px;
+    background: #ffd83d;
 
-    padding: 12px 14px;
+    border: 3px solid #222;
 
-    background: white;
+    border-radius: 8px;
 
-    border: 2px solid #c9ddea;
+    font-size: 25px;
 
-    border-radius: 10px;
 }
 
 
-.info strong {
-    color: #2678b6;
-}
+summary span:nth-child(2) {
 
-
-/* =========================================
-   RECOMPENSA
-========================================= */
-
-.recompensa {
+    flex: 1;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: center;
+    font-family: 'Press Start 2P', monospace;
 
-    gap: 6px;
+    font-size: 11px;
+
+}
+
+
+summary small {
+
+    margin-top: 7px;
+
+    font-family: 'VT323', monospace;
+
+    font-size: 17px;
+
+}
+
+
+summary b {
+
+    font-size: 25px;
+
+}
+
+
+details[open] summary {
+
+    background: #e63946;
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+
+    padding: 25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef8ff
+        );
+
+    line-height: 1.6;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    margin-bottom: 15px;
+
+    color: #222;
+
+    background: #ffd83d;
+
+    border: 3px solid #222;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 8px;
+
+}
+
+
+.content h2 {
+
+    margin-bottom: 12px;
+
+    color: #e63946;
+
+    font-family: 'Press Start 2P', monospace;
+
+    font-size: 17px;
+
+}
+
+
+.content p {
+
+    margin-bottom: 15px;
+
+    font-size: 19px;
+
+}
+
+
+ul {
+
+    padding-left: 25px;
+
+}
+
+
+li {
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+}
+
+
+li::marker {
+
+    content: "▶ ";
+
+    color: #e63946;
+
+}
+
+
+/* =========================
+   RECOMPENSAS
+========================= */
+
+.reward,
+.money-box {
 
     margin-top: 20px;
 
-    padding: 18px;
+    padding: 17px;
 
     text-align: center;
 
-    background: #fff1a3;
+    background: #fff3a8;
 
-    border: 3px solid #242424;
+    border: 4px solid #222;
 
-    border-radius: 14px;
-
-    box-shadow:
-        4px 4px 0 #e5b916;
 }
 
 
-.recompensa span {
+.reward strong,
+.money-box strong {
 
-    color: #806100;
+    display: block;
+
+    margin-top: 5px;
+
+    color: #e63946;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================
+   PLANOS FUTUROS
+========================= */
+
+.future-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 12px 0;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 3px solid #222;
+
+}
+
+
+.future-card > span {
+
+    font-size: 35px;
+
+}
+
+
+.future-card div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.future-card strong {
+
+    color: #3f7cac;
+
+    font-size: 21px;
+
+}
+
+
+.future-card small {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================
+   CURRÍCULO
+========================= */
+
+.curriculum-content {
+
+    text-align: center;
+
+}
+
+
+.curriculum-button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 16px 25px;
+
+    color: white;
+
+    background: #e63946;
+
+    border: 4px solid #222;
+
+    text-decoration: none;
+
+    font-family: 'Press Start 2P', monospace;
 
     font-size: 10px;
 
-    font-weight: 700;
+    box-shadow:
+        5px 5px 0 #222;
 
-    letter-spacing: 1px;
+    transition: .15s;
+
 }
 
 
-.recompensa strong {
-    color: #303030;
-}
+.curriculum-button:hover {
 
-
-.verde {
-
-    background: #cff6d8;
+    transform:
+        translate(3px, 3px);
 
     box-shadow:
-        4px 4px 0 #20a653;
+        2px 2px 0 #222;
+
 }
 
 
-.azul {
+.file-info {
 
-    background: #d9efff;
+    margin-top: 18px;
 
-    box-shadow:
-        4px 4px 0 #2879b8;
+    color: #777;
+
+    font-size: 15px !important;
+
 }
 
 
-.roxo {
-
-    background: #ead9f4;
-
-    box-shadow:
-        4px 4px 0 #9653af;
-}
-
-
-/* =========================================
-   RODAPÉ
-========================================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
 
-    margin-top: 25px;
+    margin-top: 30px;
 
     padding-top: 20px;
 
     text-align: center;
 
-    border-top: 3px dashed #c7c7c7;
+    border-top: 4px dashed #222;
+
 }
 
 
-.pokebola-footer {
+.pokeball-footer {
 
-    margin-bottom: 8px;
+    font-family: Arial;
 
-    font-size: 30px;
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
 }
 
 
@@ -850,9 +860,10 @@ footer strong {
 
     display: block;
 
-    color: #333;
+    font-family: 'Press Start 2P', monospace;
 
-    font-size: 12px;
+    font-size: 9px;
+
 }
 
 
@@ -860,130 +871,155 @@ footer small {
 
     display: block;
 
-    margin-top: 7px;
+    margin-top: 10px;
 
-    color: #7b858b;
-
-    font-size: 11px;
-}
-
-
-/* =========================================
-   ANIMAÇÕES
-========================================= */
-
-@keyframes flutuar {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(-3deg);
-
-    }
-
-    50% {
-
-        transform:
-            translateY(-10px)
-            rotate(3deg);
-
-    }
+    font-size: 17px;
 
 }
 
 
-/* =========================================
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes sparkle {
+
+    from {
+
+        opacity: .3;
+
+        transform: scale(.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1.2);
+
+    }
+
+}
+
+
+/* =========================
    CELULAR
-========================================= */
+========================= */
 
 @media (max-width: 650px) {
 
     body {
-        padding: 25px 10px 50px;
+
+        padding: 25px 10px;
+
     }
 
 
     .game {
-        padding: 18px;
+
+        padding: 15px;
 
         border-width: 5px;
-    }
 
-
-    .topo {
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 12px;
-    }
-
-
-    .status {
-        justify-content: center;
-    }
-
-
-    .logo {
-        font-size: 26px;
-    }
-
-
-    .perfil {
-
-        flex-direction: column;
-
-        text-align: center;
     }
 
 
     h1 {
-        font-size: 23px;
+
+        font-size: 24px;
+
     }
 
 
-    .pokemon {
-        transform: scale(.6);
+    .game-label {
+
+        font-size: 7px;
+
     }
 
 
-    .pika {
-        left: -15px;
-        bottom: 2%;
+    .level {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 15px;
+
     }
 
 
-    .raio {
-        right: -12px;
-        bottom: 3%;
+    .trainer-card {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
     }
 
 
-    .pokebola {
-        right: -5px;
-        top: 2%;
+    .trainer-info {
+
+        width: 100%;
+
     }
 
 
-    .badge {
-        display: none;
+    summary {
+
+        padding: 12px;
+
+        gap: 9px;
+
     }
 
 
-    .missao-nome strong {
-        font-size: 15px;
+    summary .button-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 20px;
+
     }
 
 
-    .conteudo {
+    summary span:nth-child(2) {
+
+        font-size: 8px;
+
+    }
+
+
+    summary small {
+
+        font-size: 14px;
+
+    }
+
+
+    .content {
+
         padding: 18px;
+
     }
 
 
-    .conteudo h2 {
-        font-size: 18px;
+    .content h2 {
+
+        font-size: 14px;
+
+    }
+
+
+    .pokeball {
+
+        display: none;
+
     }
 
 }
