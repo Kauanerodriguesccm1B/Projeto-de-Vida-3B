@@ -1,70 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>🎮 Minha Jornada Pokémon</title>
+    <title>🎮 Kauane — Pokémon Trainer</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==============================
-         DECORAÇÃO POKÉMON
-    =============================== -->
+    <!-- =========================
+         FUNDO / DECORAÇÕES
+    ========================== -->
 
-    <div class="pokemon pika">⚡</div>
-    <div class="pokemon pokebola">🔴</div>
-    <div class="pokemon estrela">✨</div>
-    <div class="pokemon raio">⚡</div>
-    <div class="pokemon pokebola2">⚪</div>
-    <div class="pokemon folha">🌿</div>
-    <div class="pokemon estrela2">⭐</div>
+    <div class="pixel-bg"></div>
 
+    <div class="pokeball ball1">◓</div>
+    <div class="pokeball ball2">◓</div>
 
-    <!-- ==============================
-         PAINEL PRINCIPAL
-    =============================== -->
+    <div class="spark spark1">✦</div>
+    <div class="spark spark2">✧</div>
+    <div class="spark spark3">✦</div>
+    <div class="spark spark4">✧</div>
+
+    <div class="grass grass1">🌿</div>
+    <div class="grass grass2">🌿</div>
+
+    <!-- =========================
+         CONTAINER PRINCIPAL
+    ========================== -->
 
     <main class="game">
 
-        <!-- TOPO DO JOGO -->
+        <!-- CABEÇALHO -->
 
-        <header class="topo">
+        <header class="header">
 
-            <div class="logo">
-                <span>POKÉ</span><strong>MON</strong>
+            <div class="game-label">
+                ★ TRAINER PROFILE ★
             </div>
 
-            <div class="status">
-                <span>🎮 PLAYER 1</span>
-                <span class="online">● ONLINE</span>
+            <h1>
+                KAUANE
+            </h1>
+
+            <div class="subtitle">
+                ✦ POKÉMON TRAINER ✦
+            </div>
+
+            <div class="level">
+                LV. 17
             </div>
 
         </header>
 
 
-        <!-- PERFIL -->
+        <!-- =========================
+             PERFIL
+        ========================== -->
 
-        <section class="perfil">
+        <section class="trainer-card">
 
-            <div class="avatar">
-                ⚡
+            <div class="trainer-photo">
+
+                <div class="photo-frame">
+
+                    <div class="photo-placeholder">
+                        👩🏻‍🎓
+                    </div>
+
+                </div>
+
+                <div class="trainer-name">
+                    KAUANE
+                </div>
+
             </div>
 
-            <div class="perfil-texto">
 
-                <span class="label">TREINADORA</span>
+            <div class="trainer-info">
 
-                <h1>
-                    Minha Jornada Pokémon
-                </h1>
+                <div class="status-title">
+                    STATUS DO TREINADOR
+                </div>
+
+                <div class="status-line">
+                    <span>EXP</span>
+                    <div class="bar">
+                        <div class="bar-fill"></div>
+                    </div>
+                </div>
 
                 <p>
-                    🎮 Escolha sua próxima missão!
+                    🎒 Treinadora em evolução
+                </p>
+
+                <p>
+                    ⭐ Especialidade: determinação
+                </p>
+
+                <p>
+                    ⚡ Próximo objetivo: conquistar meus sonhos
                 </p>
 
             </div>
@@ -72,141 +111,69 @@
         </section>
 
 
-        <!-- BARRA DE XP -->
+        <!-- =========================
+             MENU
+        ========================== -->
 
-        <div class="xp-box">
+        <section class="menu">
 
-            <div class="xp-top">
-
-                <span>⭐ EXPERIÊNCIA</span>
-
-                <strong>LV. 17</strong>
-
-            </div>
-
-            <div class="xp-bar">
-
-                <div class="xp-progresso"></div>
-
-            </div>
-
-            <small>
-                Próximo nível: continuar conquistando meus objetivos!
-            </small>
-
-        </div>
-
-
-        <!-- ==============================
-             MISSÕES
-        =============================== -->
-
-        <section class="missoes">
-
-            <div class="titulo-secao">
-
-                <span>📋</span>
-
-                <div>
-                    <strong>MISSÕES</strong>
-                    <small>Escolha uma missão para começar</small>
-                </div>
-
+            <div class="menu-title">
+                <span>▶</span>
+                MISSÕES DA TREINADORA
+                <span>◀</span>
             </div>
 
 
-            <!-- ==============================
-                 MISSÃO 1 — UEM
-            =============================== -->
+            <!-- ESTUDOS -->
 
-            <details class="missao estudos">
+            <details>
 
                 <summary>
 
-                    <div class="icone-missao">
-                        🎓
-                    </div>
+                    <span class="button-icon">
+                        📚
+                    </span>
 
-                    <div class="missao-nome">
-
-                        <strong>Aprovação na UEM</strong>
-
+                    <span>
+                        ESTUDOS PARA O ENEM
                         <small>
-                            ⭐ Missão principal
+                            Treinar para a batalha final
                         </small>
+                    </span>
 
-                    </div>
-
-                    <div class="badge">
-                        QUEST 01
-                    </div>
-
-                    <div class="seta">
-                        ▼
-                    </div>
+                    <b>+</b>
 
                 </summary>
 
 
-                <div class="conteudo">
+                <div class="content">
 
-                    <div class="tag">
+                    <div class="badge">
                         🏆 MISSÃO PRINCIPAL
                     </div>
 
                     <h2>
-                        🎓 Conquistar a UEM
+                        📚 Treinamento para o ENEM
                     </h2>
 
                     <p>
-                        Meu objetivo é me preparar para o vestibular
-                        da UEM e conquistar minha aprovação.
+                        Preparar-me para o ENEM, melhorar meu desempenho
+                        e conquistar uma excelente nota.
                     </p>
-
-
-                    <h3>📚 TREINAMENTO</h3>
 
                     <ul>
 
-                        <li>📖 Curso pré-vestibular Alfa — segunda a sexta</li>
-
-                        <li>⏰ Horário: das 19:00 às 22:30</li>
-
-                        <li>✍️ Fazer uma redação por semana</li>
-
-                        <li>🎮 Fazer 2 simulados por mês</li>
+                        <li>⚡ Estudar um pouco todos os dias.</li>
+                        <li>📖 Revisar os conteúdos.</li>
+                        <li>✍️ Praticar redação.</li>
+                        <li>🧠 Fazer exercícios.</li>
+                        <li>🎮 Realizar simulados.</li>
 
                     </ul>
 
-
-                    <h3>📅 DATA DA BATALHA</h3>
-
-                    <div class="info">
-
-                        <span>🏆 Vestibular</span>
-
-                        <strong>12/07/2026</strong>
-
-                    </div>
-
-
-                    <div class="info">
-
-                        <span>🎁 Resultado</span>
-
-                        <strong>07/08/2026</strong>
-
-                    </div>
-
-
-                    <div class="recompensa">
-
-                        <span>🏆 RECOMPENSA</span>
-
-                        <strong>
-                            CONSEGUIR MINHA APROVAÇÃO NA UEM!
-                        </strong>
-
+                    <div class="reward">
+                        🏆 RECOMPENSA:
+                        <strong>Conquistar uma ótima nota!</strong>
                     </div>
 
                 </div>
@@ -214,92 +181,166 @@
             </details>
 
 
+            <!-- FACULDADE -->
 
-            <!-- ==============================
-                 MISSÃO 2 — FINANÇAS
-            =============================== -->
-
-            <details class="missao dinheiro">
+            <details>
 
                 <summary>
 
-                    <div class="icone-missao">
-                        💰
-                    </div>
+                    <span class="button-icon">
+                        🎓
+                    </span>
 
-                    <div class="missao-nome">
-
-                        <strong>Finanças</strong>
-
+                    <span>
+                        FACULDADE
                         <small>
-                            💎 Missão de dinheiro
+                            Próxima região desbloqueada
                         </small>
+                    </span>
 
-                    </div>
-
-                    <div class="badge">
-                        QUEST 02
-                    </div>
-
-                    <div class="seta">
-                        ▼
-                    </div>
+                    <b>+</b>
 
                 </summary>
 
 
-                <div class="conteudo">
+                <div class="content">
 
-                    <div class="tag">
+                    <div class="badge">
+                        🎓 PRÓXIMO GINÁSIO
+                    </div>
+
+                    <h2>
+                        📊 Ciências Contábeis
+                    </h2>
+
+                    <p>
+                        Meu objetivo é entrar na faculdade e cursar
+                        Ciências Contábeis.
+                    </p>
+
+                    <ul>
+
+                        <li>🎓 Concluir o Ensino Médio.</li>
+                        <li>📝 Fazer o vestibular/ENEM.</li>
+                        <li>🏫 Entrar na faculdade.</li>
+                        <li>📚 Estudar Ciências Contábeis.</li>
+                        <li>💼 Construir minha carreira.</li>
+
+                    </ul>
+
+                    <div class="reward">
+                        ⭐ OBJETIVO:
+                        <strong>Conquistar minha vaga na faculdade!</strong>
+                    </div>
+
+                </div>
+
+            </details>
+
+
+            <!-- TEMPO -->
+
+            <details>
+
+                <summary>
+
+                    <span class="button-icon">
+                        ⏱️
+                    </span>
+
+                    <span>
+                        ADMINISTRAÇÃO DO TEMPO
+                        <small>
+                            Organizando meus turnos
+                        </small>
+                    </span>
+
+                    <b>+</b>
+
+                </summary>
+
+
+                <div class="content">
+
+                    <div class="badge">
+                        ⏱️ HABILIDADE ESPECIAL
+                    </div>
+
+                    <h2>
+                        🧭 Meu gerenciamento de tempo
+                    </h2>
+
+                    <p>
+                        Quero aprender a organizar melhor minha rotina,
+                        equilibrando estudos, trabalho, descanso e
+                        meus objetivos pessoais.
+                    </p>
+
+                    <ul>
+
+                        <li>📚 Separar horários para estudar.</li>
+                        <li>🎯 Definir prioridades.</li>
+                        <li>⏰ Evitar deixar tudo para última hora.</li>
+                        <li>💤 Reservar momentos para descanso.</li>
+                        <li>📝 Organizar minhas tarefas.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+            <!-- FINANÇAS -->
+
+            <details>
+
+                <summary>
+
+                    <span class="button-icon">
+                        💰
+                    </span>
+
+                    <span>
+                        FINANÇAS
+                        <small>
+                            Construindo meu inventário
+                        </small>
+                    </span>
+
+                    <b>+</b>
+
+                </summary>
+
+
+                <div class="content">
+
+                    <div class="badge">
                         💰 MISSÃO FINANCEIRA
                     </div>
 
                     <h2>
-                        💎 Meu Tesouro
+                        💎 Meu dinheiro, minhas metas
                     </h2>
 
-                    <h3>📥 RENDA</h3>
+                    <p>
+                        Quero aprender a administrar meu dinheiro,
+                        guardar uma parte e evitar gastos desnecessários.
+                    </p>
 
                     <ul>
 
-                        <li>
-                            💵 Salário do trabalho:
-                            <strong>R$ 740,00</strong>
-                        </li>
-
-                        <li>
-                            ⭐ Renda extra:
-                            <strong>R$ 140,00</strong>
-                        </li>
+                        <li>💵 Organizar minha renda.</li>
+                        <li>📊 Controlar meus gastos.</li>
+                        <li>💰 Guardar dinheiro.</li>
+                        <li>🎯 Criar metas financeiras.</li>
+                        <li>📦 Evitar compras por impulso.</li>
 
                     </ul>
 
-
-                    <h3>🎒 ORGANIZAÇÃO</h3>
-
-                    <ul>
-
-                        <li>💎 Guardar: <strong>R$ 500,00</strong></li>
-
-                        <li>💙 Terapia: <strong>R$ 80,00</strong></li>
-
-                        <li>✂️ Corte de cabelo: <strong>R$ 40,00</strong></li>
-
-                        <li>🛍️ Parcela Shein: <strong>R$ 90,00</strong></li>
-
-                        <li>🎮 Sobra: <strong>Gasto livre</strong></li>
-
-                    </ul>
-
-
-                    <div class="recompensa verde">
-
-                        <span>💎 TESOURO</span>
-
-                        <strong>
-                            Guardar dinheiro e cuidar da minha vida financeira!
-                        </strong>
-
+                    <div class="money-box">
+                        💎 META FINANCEIRA
+                        <strong>Guardar dinheiro para meus grandes objetivos.</strong>
                     </div>
 
                 </div>
@@ -307,80 +348,76 @@
             </details>
 
 
+            <!-- PLANOS FUTUROS -->
 
-            <!-- ==============================
-                 MISSÃO 3 — PORTFÓLIO
-            =============================== -->
-
-            <details class="missao portfolio">
+            <details>
 
                 <summary>
 
-                    <div class="icone-missao">
-                        🎨
-                    </div>
+                    <span class="button-icon">
+                        🏍️
+                    </span>
 
-                    <div class="missao-nome">
-
-                        <strong>Criar um Portfólio</strong>
-
+                    <span>
+                        PLANOS FUTUROS
                         <small>
-                            🎨 Missão criativa
+                            Aventuras desbloqueáveis
                         </small>
+                    </span>
 
-                    </div>
-
-                    <div class="badge">
-                        QUEST 03
-                    </div>
-
-                    <div class="seta">
-                        ▼
-                    </div>
+                    <b>+</b>
 
                 </summary>
 
 
-                <div class="conteudo">
+                <div class="content">
 
-                    <div class="tag">
-                        🎨 MISSÃO CRIATIVA
+                    <div class="badge">
+                        🌎 MISSÕES FUTURAS
                     </div>
 
                     <h2>
-                        ⭐ Meu Portfólio
+                        🚀 Meus próximos objetivos
                     </h2>
 
-                    <p>
-                        Criar e organizar um portfólio para apresentar
-                        meus trabalhos, projetos, habilidades e experiências.
-                    </p>
+                    <div class="future-card">
+
+                        <span>🏍️</span>
+
+                        <div>
+                            <strong>Comprar minha moto</strong>
+                            <small>
+                                Uma conquista pessoal importante.
+                            </small>
+                        </div>
+
+                    </div>
 
 
-                    <h3>🎒 OBJETIVOS</h3>
+                    <div class="future-card">
 
-                    <ul>
+                        <span>✈️</span>
 
-                        <li>⭐ Selecionar meus melhores trabalhos</li>
+                        <div>
+                            <strong>Fazer uma viagem</strong>
+                            <small>
+                                Conhecer novos lugares e viver novas experiências.
+                            </small>
+                        </div>
 
-                        <li>📁 Organizar meus projetos</li>
-
-                        <li>🎯 Apresentar minhas habilidades</li>
-
-                        <li>🎨 Criar uma identidade visual</li>
-
-                        <li>🔄 Manter o portfólio atualizado</li>
-
-                    </ul>
+                    </div>
 
 
-                    <div class="recompensa azul">
+                    <div class="future-card">
 
-                        <span>🏆 RECOMPENSA</span>
+                        <span>⭐</span>
 
-                        <strong>
-                            Construir um portfólio que represente quem eu sou!
-                        </strong>
+                        <div>
+                            <strong>Construir meu futuro</strong>
+                            <small>
+                                Alcançar meus objetivos passo a passo.
+                            </small>
+                        </div>
 
                     </div>
 
@@ -389,85 +426,56 @@
             </details>
 
 
+            <!-- CURRÍCULO -->
 
-            <!-- ==============================
-                 MISSÃO 4 — CURRÍCULO
-            =============================== -->
-
-            <details class="missao curriculo-missao">
+            <details>
 
                 <summary>
 
-                    <div class="icone-missao">
+                    <span class="button-icon">
                         📄
-                    </div>
+                    </span>
 
-                    <div class="missao-nome">
-
-                        <strong>Atualizar Currículo</strong>
-
+                    <span>
+                        CURRÍCULO
                         <small>
-                            📋 Missão profissional
+                            Ficha da treinadora
                         </small>
+                    </span>
 
-                    </div>
-
-                    <div class="badge">
-                        QUEST 04
-                    </div>
-
-                    <div class="seta">
-                        ▼
-                    </div>
+                    <b>+</b>
 
                 </summary>
 
 
-                <div class="conteudo">
+                <div class="content curriculum-content">
 
-                    <div class="tag">
-                        💼 MISSÃO PROFISSIONAL
+                    <div class="badge">
+                        📄 TRAINER CARD
                     </div>
 
                     <h2>
-                        📄 Meu Currículo
+                        📋 Currículo — Kauane Rodrigues
                     </h2>
 
                     <p>
-                        Manter meu currículo atualizado para novas
-                        oportunidades de trabalho, estágio,
-                        jovem aprendiz e projetos.
+                        Aqui está minha ficha profissional,
+                        com minhas informações e trajetória.
                     </p>
 
 
-                    <h3>🎯 O QUE ATUALIZAR</h3>
+                    <a
+                        href="./Curriculo_Kauane_Rodrigues_Departamento_de_Fisica_UEM.pdf"
+                        target="_blank"
+                        class="curriculum-button">
 
-                    <ul>
+                        📄 ABRIR CURRÍCULO
 
-                        <li>👤 Informações pessoais</li>
+                    </a>
 
-                        <li>🎓 Formação acadêmica</li>
-
-                        <li>📚 Cursos</li>
-
-                        <li>⭐ Habilidades</li>
-
-                        <li>💼 Experiências</li>
-
-                        <li>🎨 Projetos e atividades</li>
-
-                    </ul>
-
-
-                    <div class="recompensa roxo">
-
-                        <span>🏆 RECOMPENSA</span>
-
-                        <strong>
-                            Ter um currículo pronto para novas oportunidades!
-                        </strong>
-
-                    </div>
+                    <p class="file-info">
+                        📁 Curriculo_Kauane_Rodrigues_Departamento_de_Fisica_UEM.pdf
+                    </p>
 
                 </div>
 
@@ -476,18 +484,18 @@
         </section>
 
 
-        <!-- ==============================
+        <!-- =========================
              RODAPÉ
-        =============================== -->
+        ========================== -->
 
         <footer>
 
-            <div class="pokebola-footer">
-                🔴⚪
+            <div class="pokeball-footer">
+                ◓
             </div>
 
             <strong>
-                ✨ TODA JORNADA COMEÇA COM UM PRIMEIRO PASSO ✨
+                ✦ SUA JORNADA ESTÁ APENAS COMEÇANDO ✦
             </strong>
 
             <small>
@@ -499,34 +507,30 @@
     </main>
 
 
-    <!-- ==============================
-         JS
-    =============================== -->
+    <!-- =========================
+         SCRIPT
+    ========================== -->
 
     <script>
 
         /*
-         * Faz com que apenas um objetivo
-         * fique aberto por vez.
-         *
-         * O usuário pode clicar novamente
-         * no botão aberto para FECHAR.
+         * Faz apenas um botão abrir por vez.
+         * Também mantém o botão funcionando
+         * normalmente para fechar.
          */
 
-        const missoes = document.querySelectorAll("details");
+        const botoes = document.querySelectorAll("details");
 
-        missoes.forEach((missao) => {
+        botoes.forEach((botao) => {
 
-            missao.addEventListener("toggle", () => {
+            botao.addEventListener("toggle", () => {
 
-                if (missao.open) {
+                if (botao.open) {
 
-                    missoes.forEach((outra) => {
+                    botoes.forEach((outro) => {
 
-                        if (outra !== missao) {
-
-                            outra.open = false;
-
+                        if (outro !== botao) {
+                            outro.open = false;
                         }
 
                     });
